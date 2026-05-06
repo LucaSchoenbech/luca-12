@@ -9,6 +9,7 @@ import Insights from './pages/Insights';
 import TransizioneManagementPmi from './pages/articles/TransizioneManagementPmi';
 import ShadowAiPmi from './pages/articles/ShadowAiPmi';
 import LifeSciences2026 from './pages/articles/LifeSciences2026';
+import PaperPackaging2026 from './pages/articles/PaperPackaging2026';
 import AnalyticalHeadhunting from './pages/articles/AnalyticalHeadhunting';
 import Contact from './pages/Contact';
 
@@ -35,6 +36,7 @@ export default function App() {
           <Route path="/insights/transizione-management-pmi" element={<TransizioneManagementPmi />} />
           <Route path="/insights/shadow-ai-pmi" element={<ShadowAiPmi />} />
           <Route path="/insights/life-sciences-2026" element={<LifeSciences2026 />} />
+          <Route path="/insights/paper-packaging-2026" element={<PaperPackaging2026 />} />
           <Route path="/contatti" element={<Contact />} />
         </Routes>
       </Layout>

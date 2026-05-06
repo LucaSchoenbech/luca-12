@@ -23,9 +23,9 @@ const resources = {
         "btn_contact": "Entra in contatto",
         "btn_method": "Esplora il metodo",
         "intro_title": "Il brief iniziale raramente coincide con quello che <span className=\"italic\">effettivamente serve.</span>",
-        "intro_p1": "Lavoro nella ricerca di figure manageriali da quasi vent'anni. Il valore consulenziale consiste nell'arrivare insieme alla definizione vera del mandato prima di attivare la ricerca.",
+        "intro_p1": "Lavoro nella ricerca e selezione da quasi vent'anni, con un focus su ruoli di middle management e senior professional. Il valore consulenziale consiste nell'arrivare insieme alla definizione vera del mandato prima di attivare la ricerca.",
         "intro_p2": "La mia metodologia integra una dimensione analitica di mappatura con una lettura psicometrica e semantica della motivazione del candidato.",
-        "experience_quote": "\"Da quasi vent'anni, accanto a chi sceglie le persone e le loro storie professionali.\"",
+        "experience_quote": "\"Facilito l'incontro tra professionisti e aziende, nei momenti in cui entrambi cercano qualcosa di importante.\"",
         "engagements_title": "Selected Engagements",
         "engagements_explore": "Alcune case histories",
         "engagements": [
@@ -45,8 +45,19 @@ const resources = {
             "description": "Responsabile produzione per stabilimento da 600 dipendenti in fase di scaling industriale."
           }
         ],
+        "insights_subtitle": "Pensiero e Metodo",
+        "insights_title": "Insights & Prospettive",
+        "insights_explore": "Tutti gli articoli",
         "pillars_title": "Un approccio analitico e interdipendente.",
         "pillars_desc": "Il mio metodo integra strumenti psicometrici scientificamente validati con l'analisi semantica del linguaggio della motivazione.",
+        "report_title": "Ogni nostra ricerca si chiude con un <span className=\"italic text-accent\">Search Report digitale</span>: non un PDF, ma intelligence di mercato navigabile.",
+        "report_cta": "Scopri il metodo",
+        "report_bands": [
+          { "title": "TALENT MAPPING", "desc": "Perimetro del talent pool esplorato" },
+          { "title": "COMPENSATION BENCHMARKING", "desc": "Ranges salariali, benefits, modelli MBO" },
+          { "title": "DISTRIBUZIONE GEOGRAFICA", "desc": "Dove si concentra il talento" },
+          { "title": "COMPOSIZIONE SETTORIALE", "desc": "Industrie e mercati di provenienza" }
+        ],
         "pillars": [
           { "t": "Headhunting Analitico", "d": "La mappatura strutturata come deliverable consulenziale autonomo." },
           { "t": "Contesto Organizzativo", "d": "La logica delle interdipendenze per prevenire fallimenti prevedibili." },
@@ -58,7 +69,7 @@ const resources = {
         "title": "HR passionated & <br /><span className=\"italic text-accent\">Head Hunter.</span>",
         "p1": "Con quasi 20 anni di esperienza in talent acquisition nei settori Industriale, Life Sciences e Servizi, unisco solide competenze di strategia di recruitment a un'esecuzione tecnica hands-on.",
         "quote": "\"L'innovazione nel recruitment passa attraverso la capacità di trasformare la complessità organizzativa in insight e azioni misurabili, grazie anche alla tecnologia.\"",
-        "p2": "Il mio background spazia dall'executive search per clienti direzionali, all'avviamento e gestione di business line nel segmento Healthcare/Life Sciences, fino alla consulenza HR piu direzionale ed organizzativa.",
+        "p2": "Il mio background spazia dall'headhunting per ruoli manageriali e direzionali, all'avviamento e gestione di business line nel segmento Healthcare/Life Sciences, fino alla consulenza HR più organizzativa.",
         "p3": "A questa esperienza unisco uno stack tecnico avanzato: progetto, sviluppo e metto in produzione in autonomia web app e dashboard AI-powered su Google Cloud. Automatizzando l'analisi dei dati HR e sfruttando tool di AI multimodale (come video e voce sintetica), trasformo la reportistica in insight sempre accessibili, riducendo i tempi operativi e restituendo un valore di delivery più alto ai candidati e alle aziende."
       },
       "work_areas": {
@@ -96,7 +107,7 @@ const resources = {
           },
           {
             "title": "ICT",
-            "description": "Information & Communication Technology. Selezione di profili executive e manageriali per guidare la digital transformation, architetture di sistema, infrastrutture e innovazione tecnologica."
+            "description": "Information & Communication Technology. Selezione di profili senior e manageriali per guidare la digital transformation, architetture di sistema, infrastrutture e innovazione tecnologica."
           }
         ],
         "engagements": [
@@ -145,10 +156,11 @@ const resources = {
         "read_article": "Leggi articolo completo",
         "articles": [
           {
-            "title": "Il fattore umano come variabile di rischio nelle acquisizioni di Private Equity",
-            "excerpt": "Perché la due diligence sulla leadership è la dimensione più sottovalutata del processo di acquisizione.",
-            "tag": "Private Equity",
-            "date": "In programma"
+            "title": "Paper & Packaging 2026: leggere la trasformazione del settore attraverso la lente del capitale umano",
+            "excerpt": "Se la carta grafica perde terreno, il packaging affronta una crescita con vincoli normativi crescenti e competenze sempre più rare: priorità HR e organizzative.",
+            "tag": "Paper & Packaging",
+            "date": "Maggio 2026",
+            "slug": "/insights/paper-packaging-2026"
           },
           {
             "title": "2026: L'Anno della Convergenza",
@@ -171,7 +183,7 @@ const resources = {
             "date": "In programma"
           },
           {
-            "title": "Analisi semantica della motivazione nei colloqui executive",
+            "title": "Analisi semantica della motivazione nei colloqui manageriali",
             "excerpt": "Cosa rivela il linguaggio del candidato che il curriculum non racconta.",
             "tag": "Methodology",
             "date": "In programma"
@@ -223,9 +235,9 @@ const resources = {
         "btn_contact": "Get in touch",
         "btn_method": "Explore the method",
         "intro_title": "The initial brief rarely matches what is <span className=\"italic\">actually needed.</span>",
-        "intro_p1": "I have been working in executive search for almost twenty years. The consulting value lies in arriving together at the true definition of the assignment before activating the search.",
+        "intro_p1": "I have been working in search and selection for almost twenty years, focusing on middle management and senior professional roles. The consulting value lies in arriving together at the true definition of the assignment before activating the search.",
         "intro_p2": "My methodology integrates an analytical mapping dimension with a psychometric and semantic reading of the candidate's motivation.",
-        "experience_quote": "\"For almost twenty years, alongside those who choose people and their professional stories.\"",
+        "experience_quote": "\"I facilitate the meeting between professionals and companies, at times when both are looking for something important.\"",
         "engagements_title": "Selected Engagements",
         "engagements_explore": "Some case histories",
         "engagements": [
@@ -245,8 +257,19 @@ const resources = {
             "description": "Production Manager for a 600-employee plant during industrial scaling."
           }
         ],
+        "insights_subtitle": "Thought and Method",
+        "insights_title": "Insights & Perspectives",
+        "insights_explore": "All articles",
         "pillars_title": "An analytical and interdependent approach.",
         "pillars_desc": "My method integrates scientifically validated psychometric tools with semantic analysis of motivational language.",
+        "report_title": "Every search concludes with a <span className=\"italic text-accent\">digital Search Report</span>: not a PDF, but navigable market intelligence.",
+        "report_cta": "Explore the method",
+        "report_bands": [
+          { "title": "TALENT MAPPING", "desc": "Scope of the talent pool explored" },
+          { "title": "COMPENSATION BENCHMARKING", "desc": "Salary ranges, benefits, MBO patterns" },
+          { "title": "GEOGRAPHIC DISTRIBUTION", "desc": "Where the talent is concentrated" },
+          { "title": "SECTOR COMPOSITION", "desc": "Industries of provenance" }
+        ],
         "pillars": [
           { "t": "Analytical Headhunting", "d": "Structured mapping as an independent consulting deliverable." },
           { "t": "Organizational Context", "d": "The logic of interdependencies to prevent predictable failures." },
@@ -258,13 +281,13 @@ const resources = {
         "title": "HR passionated & <br /><span className=\"italic text-accent\">Head Hunter.</span>",
         "p1": "With nearly 20 years of talent acquisition experience in the Industrial, Life Sciences, and Services sectors, I combine solid recruitment strategy skills with hands-on technical execution.",
         "quote": "\"Innovation in recruitment happens through the ability to transform organizational complexity into measurable insights and actions, leveraging technology as well.\"",
-        "p2": "My background ranges from executive search for C-level clients, to the launch and management of business lines in the Healthcare/Life Sciences segment, up to more directional and organizational HR consulting.",
+        "p2": "My background ranges from headhunting for managerial roles, to the launch and management of business lines in the Healthcare/Life Sciences segment, up to more organizational HR consulting.",
         "p3": "I pair this experience with an advanced technical stack: I independently design, develop, and deploy AI-powered web apps and dashboards on Google Cloud. By automating HR data analysis and leveraging multimodal AI tools (like synthetic video and voice), I transform reporting into always-accessible insights, reducing operational time and delivering higher value to candidates and companies."
       },
       "work_areas": {
         "subtitle": "Operative Perimeter",
         "title": "Sectors and <br /><span className=\"italic text-accent\">Engagements.</span>",
-        "p1": "In almost twenty years of working in executive and managerial search, I have traversed very different industrial sectors. This transversality is today one of the most substantial assets of my work: it allows me to read the skills market comparatively, to recognize recurrences across seemingly distant contexts, and to build sourcing strategies that go beyond obvious boundaries.",
+        "p1": "In almost twenty years of working in middle management and senior professional search, I have traversed very different industrial sectors. This transversality is today one of the most substantial assets of my work: it allows me to read the skills market comparatively, to recognize recurrences across seemingly distant contexts, and to build sourcing strategies that go beyond obvious boundaries.",
         "p2": "The candidate identification process combines direct hunting, structured mapping of the target market, and professional networking built over the years. It is an analytical rather than mechanical work: every significant assignment starts from reconstructing the universe of potential candidates and analyzing typical career trajectories for similar roles in the client's sector.",
         "engagements_title": "Selected Engagements",
         "leadership_title": "Leadership <br />Assessment",
@@ -345,10 +368,11 @@ const resources = {
         "read_article": "Read full article",
         "articles": [
           {
-            "title": "The human factor as a risk variable in Private Equity acquisitions",
-            "excerpt": "Why leadership due diligence is the most underestimated dimension of the acquisition process.",
-            "tag": "Private Equity",
-            "date": "Upcoming"
+            "title": "Paper & Packaging 2026: reading sector transformation through the human capital lens",
+            "excerpt": "As graphic paper loses ground, packaging expands with growing compliance constraints and scarce technical skills: HR and organizational priorities.",
+            "tag": "Paper & Packaging",
+            "date": "May 2026",
+            "slug": "/insights/paper-packaging-2026"
           },
           {
             "title": "2026: The Year of Convergence",

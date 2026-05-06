@@ -18,7 +18,6 @@ export default function WorkAreas() {
   });
 
   const engagements = t('work_areas.engagements', { returnObjects: true }) as Array<{ label: string, context: string }>;
-  const leadershipItems = t('work_areas.leadership_items', { returnObjects: true }) as Array<string>;
 
   return (
     <div className="py-24 md:py-40">
@@ -84,27 +83,6 @@ export default function WorkAreas() {
           </div>
         </section>
 
-        <section className="mt-64 grid grid-cols-1 lg:grid-cols-12 gap-24">
-          <div className="lg:col-span-5">
-            <h2 
-              className="text-5xl font-display font-light mb-12 italic"
-              dangerouslySetInnerHTML={{ __html: t('work_areas.leadership_title') }}
-            />
-          </div>
-          <div className="lg:col-span-7 space-y-16">
-            <p className="text-2xl text-gray-600 font-light leading-relaxed">
-              {t('work_areas.leadership_desc')}
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              {leadershipItems.map((item, idx) => (
-                <div key={idx} className="space-y-6">
-                  <div className="w-8 h-[2px] bg-accent"></div>
-                  <h4 className="text-xl font-display font-medium text-ink leading-relaxed">{item}</h4>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   );

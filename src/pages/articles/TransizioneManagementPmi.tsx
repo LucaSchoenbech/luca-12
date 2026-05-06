@@ -1,10 +1,10 @@
 import { motion } from 'motion/react';
-import { ArrowLeft, Clock } from 'lucide-react';
+import { ArrowLeft, Clock, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function TransizioneManagementPmi() {
   return (
-    <div className="py-24 md:py-48">
+    <div className="py-24 md:py-48 bg-paper">
       <div className="max-w-4xl mx-auto px-6">
         <Link 
           to="/insights"
@@ -182,34 +182,37 @@ export default function TransizioneManagementPmi() {
         </article>
       </div>
 
-      <div className="bg-[#1c1c1c] text-paper py-24 px-6 mt-24">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="inline-block px-5 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-widest font-bold mb-8 text-gray-300">
-              Appendice
-            </span>
-            <h2 className="text-4xl md:text-5xl font-display font-medium text-white">
-              Fonti e Riferimenti
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { author: "ALDAI-Federmanager & Fondirigenti", title: "Il management delle PMI lombarde di fronte alla transizione digitale e green" },
-              { author: "Assolombarda", title: "Capitale umano e manageriale per affrontare le sfide del futuro" },
-              { author: "SDA Bocconi", title: "Osservatorio sulle PMI e Family Business Italiani" },
-              { author: "Harvard Business Review", title: "Scaling up: The Peter Principle in modern organizations" },
-              { author: "AIFI", title: "L'impatto del Private Equity nelle PMI Italiane: Driver di crescita e modernizzazione" },
-              { author: "Bain & Company", title: "Global Private Equity Report - Focus Italy" }
-            ].map((source, index) => (
-              <div key={index} className="p-8 border border-white/10 rounded-xl bg-white/5 flex gap-6 hover:bg-white/10 transition-colors">
-                <span className="text-accent font-display text-2xl font-medium">{index + 1}</span>
-                <p className="text-sm text-gray-300 font-light leading-relaxed">
-                  <strong className="text-white font-medium">{source.author}:</strong> "{source.title}"
-                </p>
+      <div className="mt-24 pt-16 border-t border-accent-soft max-w-4xl mx-auto px-6">
+        <div className="mb-12">
+          <h2 className="text-3xl md:text-4xl font-display font-medium text-ink mb-4">
+            Fonti & Riferimenti
+          </h2>
+          <p className="text-gray-500 font-light">
+            Documentazione utilizzata per l'elaborazione di questo insight (Transizione Management PMI).
+          </p>
+        </div>
+        
+        <div className="flex flex-col gap-4 mb-24">
+          {[
+            { author: "ALDAI-Federmanager & Fondirigenti", title: "Il management delle PMI lombarde di fronte alla transizione digitale e green", year: "2025" },
+            { author: "Assolombarda", title: "Capitale umano e manageriale per affrontare le sfide del futuro", year: "2024" },
+            { author: "SDA Bocconi", title: "Osservatorio sulle PMI e Family Business Italiani", year: "2024" },
+            { author: "Harvard Business Review", title: "Scaling up: The Peter Principle in modern organizations", year: "2024" },
+            { author: "AIFI", title: "L'impatto del Private Equity nelle PMI Italiane: Driver di crescita e modernizzazione", year: "2023" },
+            { author: "Bain & Company", title: "Global Private Equity Report - Focus Italy", year: "2024" }
+          ].map((source, index) => (
+            <div key={index} className="flex flex-row items-center p-6 bg-white border border-gray-100 rounded shadow-sm">
+              <div className="w-12 h-12 rounded-full bg-paper flex items-center justify-center shrink-0 mr-6">
+                <FileText size={20} className="text-ink" />
               </div>
-            ))}
-          </div>
+              <div className="flex flex-col">
+                <span className="text-ink font-display text-lg font-medium mb-1">{source.author}</span>
+                <span className="text-gray-500 text-sm font-light">
+                  {source.title} <span className="mx-2">&bull;</span> {source.year}
+                </span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
