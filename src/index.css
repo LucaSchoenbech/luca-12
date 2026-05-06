@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-paper: #f8f9fa;
+  --color-ink: #0b132b;
+  --color-accent: #c5a880; /* Elegant champagne/gold */
+  --color-accent-soft: #e6dfd3;
+  
+  /* Retaining some semantic names for easier mapping if needed, but centering on the new palette */
+  --color-brand-900: #0b132b;
+  --color-brand-50: #f8f9fa;
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-ink font-sans antialiased selection:bg-ink selection:text-paper;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight font-light;
+  }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.bg-blur-header {
+  backdrop-filter: blur(12px);
+  background-color: rgba(248, 247, 244, 0.85);
+}
+
+.border-subtle {
+  @apply border-accent-soft;
+}
+
+.link-premium {
+  @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-px after:bottom-0 after:left-0 after:bg-ink after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+}
