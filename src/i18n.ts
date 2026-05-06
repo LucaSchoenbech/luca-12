@@ -66,7 +66,6 @@ const resources = {
       },
       "about": {
         "role": "Talent Acquisition Advisor",
-        "title": "Ascolto le persone. <br /><span className=\"italic text-accent\">Racconto le loro storie.</span>",
         "p1": "Con quasi 20 anni di esperienza in talent acquisition nei settori Industriale, Life Sciences e Servizi, unisco solide competenze di strategia di recruitment a un'esecuzione tecnica hands-on.",
         "quote": "\"Un curriculum racconta dove una persona è stata. Il mio lavoro è capire dove può ancora andare — e con chi.\"",
         "p2": "Il mio background spazia dall'headhunting per ruoli manageriali e direzionali, all'avviamento e gestione di business line nel segmento Healthcare/Life Sciences, fino alla consulenza HR più organizzativa.",
@@ -353,7 +352,6 @@ const resources = {
       },
       "about": {
         "role": "Talent Acquisition Advisor",
-        "title": "I listen to people. <br /><span className=\"italic text-accent\">I tell their stories.</span>",
         "p1": "With nearly 20 years of talent acquisition experience in the Industrial, Life Sciences, and Services sectors, I combine solid recruitment strategy skills with hands-on technical execution.",
         "quote": "\"A resume tells where a person has been. My job is to understand where they can still go — and with whom.\"",
         "p2": "My background ranges from headhunting for managerial roles, to the launch and management of business lines in the Healthcare/Life Sciences segment, up to more organizational HR consulting.",

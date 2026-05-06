@@ -111,8 +111,8 @@ export default function Layout({ children }: LayoutProps) {
             </div>
             <p className="text-gray-400 text-base max-w-sm leading-relaxed font-light">
               {i18n.language === 'it' 
-                ? "Ricerca, selezione e valutazione di figure manageriali e direttive. Expertise consolidata in contesti post-acquisizione e transizioni industriali." 
-                : "Search, selection and assessment of executive profiles. Consolidate expertise in post-acquisition contexts and industrial transitions."}
+                ? "Ricerca, selezione e valutazione di figure senior professional, manageriali e direttive." 
+                : "Search, selection and assessment of senior professional, managerial and executive profiles."}
             </p>
             <div className="flex space-x-6 pt-4">
               <a href="https://linkedin.com/in/lucaroberto-schoenbech" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-accent transition-colors">

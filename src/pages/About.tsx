@@ -30,15 +30,8 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-20"
+            className="space-y-12"
           >
-            <header>
-              <h1 
-                className="text-5xl md:text-7xl font-display font-light mb-8"
-                dangerouslySetInnerHTML={{ __html: t('about.title') }}
-              />
-            </header>
-            
             <div className="space-y-12 text-xl text-gray-600 leading-relaxed font-light">
               <p>
                 {t('about.p1')}
