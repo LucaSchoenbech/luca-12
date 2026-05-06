@@ -101,7 +101,7 @@ export default function Home() {
                 <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400">Anni di esperienza</span>
               </div>
               <div>
-                <span className="block text-accent font-display text-4xl mb-2">+400</span>
+                <span className="block text-accent font-display text-4xl mb-2">+500</span>
                 <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400">Posizioni gestite</span>
               </div>
               <div>

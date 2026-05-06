@@ -7,15 +7,44 @@ export default function Contact() {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
   const isFormValid = formData.name.trim() !== '' && formData.email.trim() !== '' && formData.message.trim() !== '';
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (isFormValid) {
-      const subject = encodeURIComponent(`Nuovo messaggio dal form contatti da ${formData.name}`);
-      const body = encodeURIComponent(`Nome: ${formData.name}\nEmail: ${formData.email}\n\nMessaggio:\n${formData.message}`);
-      window.location.href = `mailto:luca@schoenbech.com?subject=${subject}&body=${body}`;
-      setFormData({ name: '', email: '', message: '' });
+    if (!isFormValid) return;
+
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/luca@schoenbech.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: `Nuovo messaggio da ${formData.name}`,
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        })
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -32,17 +61,17 @@ export default function Contact() {
             
             <div className="space-y-16">
               <div className="space-y-4">
-                <h3 className="text-[10px] uppercase tracking-[0.4em] font-bold text-accent">{t('contact.institutional_title')}</h3>
-                <p className="text-gray-400 font-light text-sm">{t('contact.institutional_desc')}</p>
-                <a href="mailto:luca.roberto@humanvalue.it" className="text-xl md:text-2xl font-display font-medium hover:text-accent transition-colors block border-b border-accent-soft pb-4">
-                  luca.roberto@humanvalue.it
+                <h3 className="text-[10px] uppercase tracking-[0.4em] font-bold text-accent">{t('contact.private_title')}</h3>
+                <a href="mailto:luca@schoenbech.com" className="text-xl md:text-2xl font-display font-medium hover:text-accent transition-colors block border-b border-accent-soft pb-4">
+                  luca@schoenbech.com
                 </a>
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-[10px] uppercase tracking-[0.4em] font-bold text-accent">{t('contact.private_title')}</h3>
-                <a href="mailto:luca@schoenbech.com" className="text-xl md:text-2xl font-display font-medium hover:text-accent transition-colors block border-b border-accent-soft pb-4">
-                  luca@schoenbech.com
+                <h3 className="text-[10px] uppercase tracking-[0.4em] font-bold text-accent">{t('contact.institutional_title')}</h3>
+                <p className="text-gray-400 font-light text-sm">{t('contact.institutional_desc')}</p>
+                <a href="mailto:luca.roberto@humanvalue.it" className="text-xl md:text-2xl font-display font-medium hover:text-accent transition-colors block border-b border-accent-soft pb-4">
+                  luca.roberto@humanvalue.it
                 </a>
               </div>
 
@@ -73,10 +102,22 @@ export default function Contact() {
                   <textarea rows={4} required value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} className="w-full border-b border-accent-soft py-4 focus:outline-none focus:border-accent transition-colors bg-transparent resize-none placeholder:text-gray-300" placeholder={t('contact.form_message_placeholder')}></textarea>
                 </div>
               </div>
-              <button disabled={!isFormValid} type="submit" className={`w-full bg-ink text-paper p-6 font-bold uppercase tracking-[0.2em] flex items-center justify-center space-x-4 transition-opacity ${!isFormValid ? 'opacity-30 cursor-not-allowed' : 'opacity-100 hover:bg-accent'}`}>
-                <span>{t('contact.form_submit')}</span>
+              <button disabled={!isFormValid || isSubmitting} type="submit" className={`w-full bg-ink text-paper p-6 font-bold uppercase tracking-[0.2em] flex items-center justify-center space-x-4 transition-opacity ${(!isFormValid || isSubmitting) ? 'opacity-30 cursor-not-allowed' : 'opacity-100 hover:bg-accent'}`}>
+                <span>{isSubmitting ? t('contact.form_submitting') : t('contact.form_submit')}</span>
                 <ArrowRight size={18} />
               </button>
+              
+              {submitStatus === 'success' && (
+                <div className="bg-green-50 border border-green-200 text-green-700 p-4 rounded-sm text-sm font-medium">
+                  {t('contact.form_success')}
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="bg-red-50 border border-red-200 text-red-700 p-4 rounded-sm text-sm font-medium">
+                  {t('contact.form_error')}
+                </div>
+              )}
+
               <p className="text-[10px] text-gray-400 text-center uppercase tracking-widest font-mono">
                 {t('contact.form_protected')}
               </p>

@@ -66,9 +66,9 @@ const resources = {
       },
       "about": {
         "role": "Talent Acquisition Advisor",
-        "title": "HR passionated & <br /><span className=\"italic text-accent\">Head Hunter.</span>",
+        "title": "Ascolto le persone. <br /><span className=\"italic text-accent\">Racconto le loro storie.</span>",
         "p1": "Con quasi 20 anni di esperienza in talent acquisition nei settori Industriale, Life Sciences e Servizi, unisco solide competenze di strategia di recruitment a un'esecuzione tecnica hands-on.",
-        "quote": "\"L'innovazione nel recruitment passa attraverso la capacità di trasformare la complessità organizzativa in insight e azioni misurabili, grazie anche alla tecnologia.\"",
+        "quote": "\"Un curriculum racconta dove una persona è stata. Il mio lavoro è capire dove può ancora andare — e con chi.\"",
         "p2": "Il mio background spazia dall'headhunting per ruoli manageriali e direzionali, all'avviamento e gestione di business line nel segmento Healthcare/Life Sciences, fino alla consulenza HR più organizzativa.",
         "p3": "A questa esperienza unisco uno stack tecnico avanzato: progetto, sviluppo e metto in produzione in autonomia web app e dashboard AI-powered su Google Cloud. Automatizzando l'analisi dei dati HR e sfruttando tool di AI multimodale (come video e voce sintetica), trasformo la reportistica in insight sempre accessibili, riducendo i tempi operativi e restituendo un valore di delivery più alto ai candidati e alle aziende."
       },
@@ -110,12 +110,84 @@ const resources = {
             "description": "Information & Communication Technology. Selezione di profili senior e manageriali per guidare la digital transformation, architetture di sistema, infrastrutture e innovazione tecnologica."
           }
         ],
-        "engagements": [
-          { "label": "Direzione di Stabilimento", "context": "Per multinazionale farmaceutica quotata" },
-          { "label": "Sales Director Italia", "context": "Per gruppo industriale del packaging" },
-          { "label": "Production Manager", "context": "Per gruppo cosmetico" },
-          { "label": "Responsabile HSE", "context": "Per gruppo chimico multi-sede" },
-          { "label": "Manager & Senior Manager di practice", "context": "STRATEGY & RISK ADVISORY — FINANCIAL SERVICES" }
+        "engagement_categories": [
+          {
+            "category": "Farmaceutico",
+            "items": [
+              { "role": "Medical Affairs Manager", "company": "Multinazionale farmaceutica specialty care (€500M+ Italia, 600 dip.)", "description": "strutturazione del team medical a supporto del lancio di una nuova area terapeutica." },
+              { "role": "Market Access Manager", "company": "Filiale italiana di gruppo pharma USA su rare diseases (€100-500M, 200 dip.)", "description": "profilo con esperienza pricing & reimbursement su terapie ad alto costo." },
+              { "role": "Brand Manager Senior", "company": "Multinazionale ethical tedesca (€1Mld+ Italia, 1500 dip.)", "description": "rilancio strategico di un franchise consolidato in concorrenza con nuovi entranti generici." },
+              { "role": "Regulatory Affairs Manager", "company": "Gruppo farmaceutico italiano specialty/generics (€200-500M, 800 dip.)", "description": "rafforzamento della funzione in vista dell'espansione internazionale del portfolio." },
+              { "role": "Hospital Sales Manager", "company": "Multinazionale pharma area cardiometabolica (€1Mld+, presenza EMEA)", "description": "successione di una figura storica con riorganizzazione del territorio nazionale." },
+              { "role": "Key Account Manager Hospital", "company": "Divisione italiana di gruppo svizzero in oncologia (€500M+ Italia)", "description": "profilo ibrido scientifico-negoziale per gestione AIFA e centri ad alta complessità." }
+            ]
+          },
+          {
+            "category": "Chimico",
+            "items": [
+              { "role": "Responsabile di Stabilimento", "company": "Gruppo chimico specialties PE-backed (€200-500M, 3 stabilimenti, 600 dip.)", "description": "profilo con esperienza di scale-up e cultura industriale lean." },
+              { "role": "R&D Manager", "company": "Multinazionale chimica fine francese (€2Mld+ globale, polo italiano 300 dip.)", "description": "guida del centro di ricerca nel ridisegno del portfolio prodotti sostenibili." },
+              { "role": "EHS Manager", "company": "Polo industriale chimico italiano (€100-500M, 400 dip.)", "description": "allineamento ai nuovi obblighi ESG e gestione di un sito Seveso di soglia superiore." },
+              { "role": "Sales Manager", "company": "Chimico specialty per packaging & coating, PMI italiana family-owned (€50-100M, 150 dip.)", "description": "apertura del canale food & beverage premium." },
+              { "role": "Production Manager", "company": "Gruppo chimico multistabilimento (€200-500M, 500 dip.)", "description": "introduzione di logiche di pianificazione integrata in un contesto storicamente decentralizzato." },
+              { "role": "Procurement Manager", "company": "Multinazionale chimica tedesca (€1Mld+, polo Italia 800 dip.)", "description": "centralizzazione degli acquisti strategici in fase di pressione sui margini." }
+            ]
+          },
+          {
+            "category": "Medicale (Medical Devices)",
+            "items": [
+              { "role": "Sales Manager Hospital", "company": "Multinazionale elettromedicali area cardiologia interventistica (€500M+ Italia, 400 dip.)", "description": "profilo con network consolidato sui centri Hub di alta complessità." },
+              { "role": "Quality & Regulatory Manager", "company": "Gruppo medical devices Classe IIb/III (€100-500M, 300 dip.)", "description": "gestione della transizione MDR su un portfolio prodotti articolato." },
+              { "role": "Tender Manager", "company": "Filiale italiana di gruppo medicale USA (€200-500M Italia)", "description": "strutturazione ex novo di una funzione gare dedicata in fase di espansione commerciale." },
+              { "role": "Product Manager", "company": "Devices imaging, multinazionale giapponese (€1Mld+ globale)", "description": "lancio di una nuova piattaforma tecnologica sul mercato italiano." },
+              { "role": "Marketing Manager", "company": "Mid-size leader di nicchia in cardiologia (€50-100M, 120 dip.)", "description": "costruzione della funzione marketing in un'azienda storicamente sales-driven." },
+              { "role": "Key Account Manager", "company": "Disposable ospedalieri, gruppo industriale italiano (€100-500M, 600 dip.)", "description": "apertura di accordi quadro su gruppi d'acquisto regionali." }
+            ]
+          },
+          {
+            "category": "Diagnostica",
+            "items": [
+              { "role": "Sales Manager", "company": "IVD multinazionale per laboratori clinici (€500M+ Italia, 350 dip.)", "description": "riorganizzazione della rete commerciale post-consolidamento del mercato laboratori." },
+              { "role": "Product Manager", "company": "Diagnostica molecolare e NGS, divisione italiana di gruppo USA (€100-500M Italia)", "description": "supporto al lancio di una piattaforma di oncologia di precisione." },
+              { "role": "Marketing Manager", "company": "Point-of-care diagnostics, mid-size internazionale (€50-100M Italia, 80 dip.)", "description": "profilo con competenza su canale ospedaliero e medicina del territorio." },
+              { "role": "Service & Technical Manager", "company": "Strumentazione clinica per grandi laboratori (€200-500M, 400 dip.)", "description": "ridisegno del modello di service field in ottica di efficienza e SLA contrattuali." },
+              { "role": "Application Specialist Senior", "company": "Multinazionale tedesca di strumentazione laboratorio (€1Mld+ globale)", "description": "profilo con competenza tecnica avanzata su piattaforme di automazione totale." },
+              { "role": "Area Manager", "company": "IVD, PMI italiana in espansione (€20-50M, 60 dip.)", "description": "apertura del mercato Centro-Sud sul canale laboratori privati." }
+            ]
+          },
+          {
+            "category": "Industriale & Impiantistica",
+            "items": [
+              { "role": "Plant Manager", "company": "Stabilimento manufacturing automotive (€100-500M, 800 dip.)", "description": "riorganizzazione della produzione in ottica Industry 4.0 e revisione dei KPI di stabilimento." },
+              { "role": "Engineering Manager", "company": "EPC impiantistica industriale, gruppo italiano internazionalizzato (€200-500M, 700 dip.)", "description": "guida di progetti turnkey su clienti oil & gas e power generation." },
+              { "role": "Operations Manager", "company": "Polo Italia di multinazionale industriale tedesca (€500M+, 1200 dip.)", "description": "ridisegno della funzione operations." }
+            ]
+          },
+          {
+            "category": "Packaging",
+            "items": [
+              { "role": "Plant Manager", "company": "Gruppo packaging machinery family-owned export-oriented (€100-500M, 400 dip.)", "description": "riorganizzazione della produzione in fase di crescita post-acquisizione." },
+              { "role": "Engineering Manager", "company": "OEM packaging machinery food & beverage (€200-500M, 600 dip.)", "description": "guida del team di progettazione meccatronica per nuove linee ad alta velocità." },
+              { "role": "R&D Manager", "company": "Imballaggi flessibili sostenibili (€100-500M, 300 dip.)", "description": "sviluppo di soluzioni mono-materiale e compostabili in risposta alla normativa PPWR." },
+              { "role": "Sales Manager Export", "company": "Macchine packaging pharma, PMI italiana export-oriented (€50-100M, 200 dip.)", "description": "apertura dei mercati Asia-Pacifico e Medio Oriente con strutturazione della rete di agenti." },
+              { "role": "Key Account Manager Pharma", "company": "Imballaggi primari farmaceutici, gruppo internazionale (€500M+, 1000 dip.)", "description": "gestione di top account con specifiche GMP e processi di validation." },
+              { "role": "Quality Manager", "company": "Packaging primario pharma, gruppo italiano (€100-500M, 400 dip.)", "description": "strutturazione del sistema qualità per ampliamento del business verso clienti specialty multistabilimento." },
+              { "role": "Supply Chain Manager", "company": "Gruppo industriale PE-backed (€100-500M, 5 stabilimenti)", "description": "centralizzazione planning e demand a fronte di crescita per acquisizioni." },
+              { "role": "HSE / RSPP Manager", "company": "Gruppo industriale multistabilimento (€200-500M, 600 dip.)", "description": "profilo con competenze su siti Seveso e gestione integrata salute-sicurezza-ambiente." },
+              { "role": "Sales Manager", "company": "Componentistica B2B per macchine utensili, PMI italiana export-oriented (€50-100M, 200 dip.)", "description": "apertura del canale OEM su mercati DACH e Nord Europa." }
+            ]
+          },
+          {
+            "category": "Consumer Health",
+            "items": [
+              { "role": "Marketing Manager", "company": "Divisione italiana di multinazionale OTC (€500M+ Italia, 800 dip.)", "description": "repositioning di un portfolio brand storici post-acquisizione." },
+              { "role": "Trade Marketing Manager", "company": "Brand consumer health canale farmacia (€100-500M Italia, 300 dip.)", "description": "evoluzione del modello di category management con le catene farmacia organizzate." },
+              { "role": "Sales Manager GDO", "company": "Integratori e nutraceutici, gruppo italiano (€50-100M, 150 dip.)", "description": "apertura del canale GDO premium in affiancamento al tradizionale farmacia." },
+              { "role": "Brand Manager Senior", "company": "Linea benessere farmacia, divisione di multinazionale ethical (€1Mld+ globale)", "description": "rilancio di una linea storica con riposizionamento del target." },
+              { "role": "Innovation & NPD Manager", "company": "Consumer health, mid-size italiano (€50-100M, 100 dip.)", "description": "strutturazione del processo di sviluppo nuovi prodotti su pipeline triennale." },
+              { "role": "Key Account Manager Pharmacy", "company": "Filiale italiana di gruppo internazionale OTC (€200-500M Italia, 250 dip.)", "description": "gestione delle catene farmacia organizzate e dei nuovi gruppi d'acquisto." }
+            ]
+          }
         ]
       },
       "methodology": {
@@ -200,7 +272,7 @@ const resources = {
       "contact": {
         "title": "Iniziamo una <span className=\"italic text-accent\">conversazione.</span>",
         "institutional_title": "Mandati istituzionali e progetti enterprise",
-        "institutional_desc": "gestiti nell'ambito di Human Value / network Kienbaum",
+        "institutional_desc": "gestiti nell'ambito di Human Value",
         "private_title": "Consulenza privata e progetti diretti",
         "form_title": "Invia un messaggio",
         "form_name": "Nome e Cognome",
@@ -210,6 +282,9 @@ const resources = {
         "form_message": "Messaggio",
         "form_message_placeholder": "Descrivi brevemente il tuo mandato...",
         "form_submit": "Invia Messaggio",
+        "form_submitting": "INVIO IN CORSO...",
+        "form_success": "Messaggio inviato con successo! Ti risponderò al più presto.",
+        "form_error": "C'è stato un errore nell'invio del messaggio. Riprova o contattami direttamente via email.",
         "form_protected": "Piattaforma protetta — I dati rimangono confidenziali."
       }
     }
@@ -278,9 +353,9 @@ const resources = {
       },
       "about": {
         "role": "Talent Acquisition Advisor",
-        "title": "HR passionated & <br /><span className=\"italic text-accent\">Head Hunter.</span>",
+        "title": "I listen to people. <br /><span className=\"italic text-accent\">I tell their stories.</span>",
         "p1": "With nearly 20 years of talent acquisition experience in the Industrial, Life Sciences, and Services sectors, I combine solid recruitment strategy skills with hands-on technical execution.",
-        "quote": "\"Innovation in recruitment happens through the ability to transform organizational complexity into measurable insights and actions, leveraging technology as well.\"",
+        "quote": "\"A resume tells where a person has been. My job is to understand where they can still go — and with whom.\"",
         "p2": "My background ranges from headhunting for managerial roles, to the launch and management of business lines in the Healthcare/Life Sciences segment, up to more organizational HR consulting.",
         "p3": "I pair this experience with an advanced technical stack: I independently design, develop, and deploy AI-powered web apps and dashboards on Google Cloud. By automating HR data analysis and leveraging multimodal AI tools (like synthetic video and voice), I transform reporting into always-accessible insights, reducing operational time and delivering higher value to candidates and companies."
       },
@@ -322,12 +397,84 @@ const resources = {
             "description": "Information & Communication Technology. Selection of executive and managerial profiles to lead digital transformation, system architectures, infrastructure, and technological innovation."
           }
         ],
-        "engagements": [
-          { "label": "Plant Director", "context": "For a listed multinational pharmaceutical company" },
-          { "label": "Sales Director Italy", "context": "For an industrial packaging group" },
-          { "label": "Production Manager", "context": "For a cosmetic group" },
-          { "label": "HSE Manager", "context": "For a multi-site chemical group" },
-          { "label": "Manager & Senior Manager di practice", "context": "STRATEGY & RISK ADVISORY — FINANCIAL SERVICES" }
+        "engagement_categories": [
+          {
+            "category": "Pharma",
+            "items": [
+              { "role": "Medical Affairs Manager", "company": "Specialty care pharma multinational (€500M+ Italy, 600 emp.)", "description": "structuring the medical team to support the launch of a new therapeutic area." },
+              { "role": "Market Access Manager", "company": "Italian branch of a US pharma group for rare diseases (€100-500M, 200 emp.)", "description": "profile with pricing & reimbursement experience on high-cost therapies." },
+              { "role": "Senior Brand Manager", "company": "German ethical multinational (€1B+ Italy, 1500 emp.)", "description": "strategic relaunch of an established franchise competing with new generic entrants." },
+              { "role": "Regulatory Affairs Manager", "company": "Italian specialty/generics pharmaceutical group (€200-500M, 800 emp.)", "description": "strengthening the function ahead of the portfolio's international expansion." },
+              { "role": "Hospital Sales Manager", "company": "Cardiometabolic pharma multinational (€1B+, EMEA presence)", "description": "succession of a historic figure with reorganization of the national territory." },
+              { "role": "Key Account Manager Hospital", "company": "Italian division of a Swiss oncology group (€500M+ Italy)", "description": "hybrid scientific-commercial profile for AIFA management and highly complex centers." }
+            ]
+          },
+          {
+            "category": "Chemical",
+            "items": [
+              { "role": "Plant Manager", "company": "PE-backed specialty chemical group (€200-500M, 3 plants, 600 emp.)", "description": "profile with scale-up experience and lean industrial culture." },
+              { "role": "R&D Manager", "company": "French fine chemical multinational (€2B+ global, Italian hub 300 emp.)", "description": "leading the research center in redesigning the sustainable product portfolio." },
+              { "role": "EHS Manager", "company": "Italian chemical industrial hub (€100-500M, 400 emp.)", "description": "alignment with new ESG obligations and management of an upper-tier Seveso site." },
+              { "role": "Sales Manager", "company": "Packaging & coating specialty chemical, Italian family-owned SME (€50-100M, 150 emp.)", "description": "opening of the premium food & beverage channel." },
+              { "role": "Production Manager", "company": "Multi-site chemical group (€200-500M, 500 emp.)", "description": "introduction of integrated planning logic in a historically decentralized context." },
+              { "role": "Procurement Manager", "company": "German chemical multinational (€1B+, Italy hub 800 emp.)", "description": "centralization of strategic purchasing amidst margin pressure." }
+            ]
+          },
+          {
+            "category": "Medical Devices",
+            "items": [
+              { "role": "Sales Manager Hospital", "company": "Electromedical multinational in interventional cardiology (€500M+ Italy, 400 emp.)", "description": "profile with an established network in highly complex Hub centers." },
+              { "role": "Quality & Regulatory Manager", "company": "Class IIb/III medical devices group (€100-500M, 300 emp.)", "description": "management of the MDR transition on a complex product portfolio." },
+              { "role": "Tender Manager", "company": "Italian branch of a US medical group (€200-500M Italy)", "description": "establishing a dedicated tender function during commercial expansion." },
+              { "role": "Product Manager", "company": "Imaging devices, Japanese multinational (€1B+ global)", "description": "launch of a new technology platform on the Italian market." },
+              { "role": "Marketing Manager", "company": "Mid-size niche leader in cardiology (€50-100M, 120 emp.)", "description": "building the marketing function in a historically sales-driven company." },
+              { "role": "Key Account Manager", "company": "Hospital disposables, Italian industrial group (€100-500M, 600 emp.)", "description": "opening framework agreements with regional purchasing groups." }
+            ]
+          },
+          {
+            "category": "Diagnostics",
+            "items": [
+              { "role": "Sales Manager", "company": "IVD multinational for clinical laboratories (€500M+ Italy, 350 emp.)", "description": "reorganization of the commercial network post-consolidation of the laboratory market." },
+              { "role": "Product Manager", "company": "Molecular diagnostics & NGS, Italian division of a US group (€100-500M Italy)", "description": "supporting the launch of a precision oncology platform." },
+              { "role": "Marketing Manager", "company": "Point-of-care diagnostics, international mid-size (€50-100M Italy, 80 emp.)", "description": "profile with expertise in hospital channel and community medicine." },
+              { "role": "Service & Technical Manager", "company": "Clinical instrumentation for large laboratories (€200-500M, 400 emp.)", "description": "redesign of the field service model for efficiency and contractual SLAs." },
+              { "role": "Senior Application Specialist", "company": "German laboratory instrumentation multinational (€1B+ global)", "description": "profile with advanced technical expertise in total automation platforms." },
+              { "role": "Area Manager", "company": "Expanding Italian IVD SME (€20-50M, 60 emp.)", "description": "expanding the market in Central and Southern Italy in private laboratories." }
+            ]
+          },
+          {
+            "category": "Industrial & Engineering",
+            "items": [
+              { "role": "Plant Manager", "company": "Automotive manufacturing plant (€100-500M, 800 emp.)", "description": "production reorganization oriented towards Industry 4.0 and revision of plant KPIs." },
+              { "role": "Engineering Manager", "company": "EPC industrial engineering, internationalized Italian group (€200-500M, 700 emp.)", "description": "leading turnkey projects for oil & gas and power generation clients." },
+              { "role": "Operations Manager", "company": "Italy hub of a German industrial multinational (€500M+, 1200 emp.)", "description": "redesign of the operations function." }
+            ]
+          },
+          {
+            "category": "Packaging",
+            "items": [
+              { "role": "Plant Manager", "company": "Export-oriented family-owned packaging machinery group (€100-500M, 400 emp.)", "description": "production reorganization during post-acquisition growth." },
+              { "role": "Engineering Manager", "company": "OEM food & beverage packaging machinery (€200-500M, 600 emp.)", "description": "leading the mechatronics design team for new high-speed lines." },
+              { "role": "R&D Manager", "company": "Sustainable flexible packaging (€100-500M, 300 emp.)", "description": "developing mono-material and compostable solutions in response to PPWR regulations." },
+              { "role": "Export Sales Manager", "company": "Pharma packaging machinery, Italian export-oriented SME (€50-100M, 200 emp.)", "description": "opening Asia-Pacific and Middle East markets with structuring of the agent network." },
+              { "role": "Pharma Key Account Manager", "company": "Primary pharmaceutical packaging, international group (€500M+, 1000 emp.)", "description": "management of top accounts with GMP specifics and validation processes." },
+              { "role": "Quality Manager", "company": "Pharma primary packaging, Italian group (€100-500M, 400 emp.)", "description": "structuring the quality system to expand the business towards multi-site specialty clients." },
+              { "role": "Supply Chain Manager", "company": "PE-backed industrial group (€100-500M, 5 plants)", "description": "centralizing planning and demand amidst acquisition-driven growth." },
+              { "role": "HSE / RSPP Manager", "company": "Multi-site industrial group (€200-500M, 600 emp.)", "description": "profile with expertise on Seveso sites and integrated HSE management." },
+              { "role": "Sales Manager", "company": "B2B components for machine tools, export-oriented Italian SME (€50-100M, 200 emp.)", "description": "expanding the OEM channel in DACH and Northern Europe markets." }
+            ]
+          },
+          {
+            "category": "Consumer Health",
+            "items": [
+              { "role": "Marketing Manager", "company": "Italian division of an OTC multinational (€500M+ Italy, 800 emp.)", "description": "repositioning of a historic brand portfolio post-acquisition." },
+              { "role": "Trade Marketing Manager", "company": "Consumer health brands in pharmacy channel (€100-500M Italy, 300 emp.)", "description": "evolution of the category management model with organized pharmacy chains." },
+              { "role": "GDO Sales Manager", "company": "Supplements and nutraceuticals, Italian group (€50-100M, 150 emp.)", "description": "opening the premium mass market channel alongside the traditional pharmacy one." },
+              { "role": "Senior Brand Manager", "company": "Pharmacy wellness line, division of an ethical multinational (€1B+ global)", "description": "relaunch of a historic line with target repositioning." },
+              { "role": "Innovation & NPD Manager", "company": "Consumer health, Italian mid-size (€50-100M, 100 emp.)", "description": "structuring the new product development process over a three-year pipeline." },
+              { "role": "Pharmacy Key Account Manager", "company": "Italian branch of an international OTC group (€200-500M Italy, 250 emp.)", "description": "management of organized pharmacy chains and new purchasing groups." }
+            ]
+          }
         ]
       },
       "methodology": {
@@ -412,7 +559,7 @@ const resources = {
       "contact": {
         "title": "Let's start a <span className=\"italic text-accent\">conversation.</span>",
         "institutional_title": "Institutional mandates and enterprise projects",
-        "institutional_desc": "managed within Human Value / Kienbaum network",
+        "institutional_desc": "managed within Human Value",
         "private_title": "Private consulting and direct projects",
         "form_title": "Send a message",
         "form_name": "Full Name",
@@ -422,6 +569,9 @@ const resources = {
         "form_message": "Message",
         "form_message_placeholder": "Briefly describe your assignment...",
         "form_submit": "Send Message",
+        "form_submitting": "SENDING...",
+        "form_success": "Message sent successfully! I will reply as soon as possible.",
+        "form_error": "There was an error sending the message. Please try again or contact me directly via email.",
         "form_protected": "Protected platform — Data remains confidential."
       }
     }
