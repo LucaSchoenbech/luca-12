@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 export default function Methodology() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   
   const pillars = t('methodology.pillars', { returnObjects: true }) as Array<{ id: string, title: string, subtitle: string, content: string }>;
 
@@ -59,6 +59,12 @@ export default function Methodology() {
                     <span>Approfondisci il metodo di Mappatura</span>
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                   </Link>
+                )}
+                {pillar.id === "03" && (
+                  <a href="https://personality-assessment-998063536756.europe-west1.run.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-2 text-[10px] uppercase tracking-widest font-bold text-accent hover:text-ink transition-colors mt-4">
+                    <span>{i18n.language === 'it' ? 'Vai all\'Assessment' : 'Go to Assessment'}</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
                 )}
               </div>
             </motion.div>
