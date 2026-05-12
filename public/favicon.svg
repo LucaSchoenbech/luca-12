@@ -1,0 +1,28 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#ab8235" />
+      <stop offset="100%" stop-color="#dcb569" />
+    </linearGradient>
+    <linearGradient id="navy" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#141d2e" />
+      <stop offset="100%" stop-color="#0b111c" />
+    </linearGradient>
+  </defs>
+
+  <g>
+    <!-- Bottom Left - Navy -->
+    <path d="M 48 90 C 35 85 15 70 15 50 C 20 46 28 52 30 58 C 34 68 40 72 48 74 Z" fill="url(#navy)" />
+    <!-- Bottom Right - Navy -->
+    <path d="M 52 90 C 65 85 85 70 85 50 C 80 46 72 52 70 58 C 66 68 60 72 52 74 Z" fill="url(#navy)" />
+  </g>
+
+  <g>
+    <!-- Top Left - Gold -->
+    <path d="M 48 10 C 35 15 15 30 15 50 C 20 54 28 48 30 42 C 34 32 40 28 48 26 Z" fill="url(#gold)" />
+    <!-- Top Right - Gold -->
+    <path d="M 52 10 C 65 15 85 30 85 50 C 80 54 72 48 70 42 C 66 32 60 28 52 26 Z" fill="url(#gold)" />
+  </g>
+
+  <circle cx="50" cy="50" r="8" fill="url(#gold)" />
+</svg>
