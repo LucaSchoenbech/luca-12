@@ -11,6 +11,7 @@ import ShadowAiPmi from './pages/articles/ShadowAiPmi';
 import LifeSciences2026 from './pages/articles/LifeSciences2026';
 import PaperPackaging2026 from './pages/articles/PaperPackaging2026';
 import AnalyticalHeadhunting from './pages/articles/AnalyticalHeadhunting';
+import HumanFactorMA from './pages/articles/HumanFactorMA';
 import Contact from './pages/Contact';
 
 function ScrollToTop() {
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="/metodo/headhunting-analitico" element={<AnalyticalHeadhunting />} />
           <Route path="/aree-di-lavoro" element={<WorkAreas />} />
           <Route path="/insights" element={<Insights />} />
+          <Route path="/insights/fattore-umano-ma" element={<HumanFactorMA />} />
           <Route path="/insights/transizione-management-pmi" element={<TransizioneManagementPmi />} />
           <Route path="/insights/shadow-ai-pmi" element={<ShadowAiPmi />} />
           <Route path="/insights/life-sciences-2026" element={<LifeSciences2026 />} />

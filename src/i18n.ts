@@ -66,10 +66,10 @@ const resources = {
       },
       "about": {
         "role": "Talent Acquisition Advisor",
-        "p1": "Con quasi 20 anni di esperienza in talent acquisition nei settori Industriale, Life Sciences e Servizi, unisco solide competenze di strategia di recruitment a un'esecuzione tecnica hands-on.",
+        "p1": "Quasi vent'anni in talent acquisition, lungo tre traiettorie che oggi convergono in un unico modo di lavorare: l'esecuzione di ricerche dirette per i settori industriali, l'esperienza di delivery nel mondo Life Sciences e Healthcare, e una lettura organizzativa dei contesti aziendali — perché identificare le persone giuste richiede prima di capire dove un ruolo è collocato nell'organizzazione, da chi dipende, su quali leve incide. Su queste basi opero come libero professionista, su mandati selezionati, dal middle management ai ruoli direttivi.",
         "quote": "\"Un curriculum racconta dove una persona è stata. Il mio lavoro è capire dove può ancora andare — e con chi.\"",
-        "p2": "Il mio background spazia dall'headhunting per ruoli manageriali e direzionali, all'avviamento e gestione di business line nel segmento Healthcare/Life Sciences, fino alla consulenza HR più organizzativa.",
-        "p3": "A questa esperienza unisco uno stack tecnico avanzato: progetto, sviluppo e metto in produzione in autonomia web app e dashboard AI-powered su Google Cloud. Automatizzando l'analisi dei dati HR e sfruttando tool di AI multimodale (come video e voce sintetica), trasformo la reportistica in insight sempre accessibili, riducendo i tempi operativi e restituendo un valore di delivery più alto ai candidati e alle aziende."
+        "p2": "Il mio approccio combina hunting diretto, mappature strutturate del mercato di riferimento e una rete professionale costruita in vent'anni di interazione con candidati e clienti. Ogni mandato significativo parte dalla ricostruzione dell'universo dei profili potenziali e dall'analisi delle traiettorie di carriera tipiche per ruoli analoghi nel settore. È un lavoro analitico, non meccanico: la differenza tra trovare un nome e scegliere il nome giusto sta nella profondità con cui si legge il mercato e nella precisione con cui si comprende il contesto organizzativo del cliente.",
+        "p3": "A questo metodo affianco uno stack tecnico costruito in autonomia. Progetto e metto in produzione web app e dashboard AI-powered su Google Cloud, integrando analisi automatizzata dei dati HR e strumenti di intelligenza artificiale multimodale — dalla sintesi vocale alla generazione video. È infrastruttura di delivery: riduce i tempi operativi, libera tempo per la valutazione delle persone e restituisce a candidati e aziende una reportistica più ricca e accessibile."
       },
       "work_areas": {
         "subtitle": "Perimetro Operativo",
@@ -85,28 +85,32 @@ const resources = {
         ],
         "sectors": [
           {
-            "title": "Life Sciences, Pharma, MedTech & Cosmetica",
-            "description": "Ricerca e selezione per l'intero ecosistema della salute e del benessere. Solida expertise su ruoli operativi e direttivi in produzione, qualità, regulatory affairs, R&D, medical affairs e commerciale."
+            "title": "Pharma & Specialty Care",
+            "description": "Ricerca di figure manageriali e specialistiche lungo l'intera catena del farmaco etico. Esperienza consolidata su medical affairs, market access, regulatory, brand e commerciale ospedaliero, con copertura di aree terapeutiche complesse — oncologia, malattie rare, cardiometabolica — e di filiali italiane di gruppi internazionali."
           },
           {
-            "title": "Aziende Chimiche",
-            "description": "Competenze manageriali e tecniche per l'industria chimica. Individuazione di leadership operations, QHSE, process engineering e direzione stabilimento per multinazionali e gruppi padronali."
+            "title": "Medical Devices & Diagnostica",
+            "description": "Profili direttivi per dispositivi medici di classe IIb/III, elettromedicali, IVD, diagnostica molecolare e point-of-care. Competenza specifica sulle transizioni regolatorie MDR/IVDR, sulla gestione del canale ospedaliero e dei gruppi d'acquisto, su funzioni tender, application e service field."
           },
           {
-            "title": "Metalmeccanica",
-            "description": "Ingegneria, plant management e supply chain. Interventi mirati per l'acquisizione di talenti in contesti di automazione industriale, precision engineering e trasformazione lean."
+            "title": "Cosmetica, Fragranze, Hair Care & Consumer Health",
+            "description": "Selezione per i mondi della bellezza e del benessere quotidiano: dermocosmesi, profumeria selettiva e mass market, hair care professionale e retail, OTC, integratori e nutraceutici. Ruoli di brand management, trade marketing, innovation & NPD, key account su canale farmacia, GDO e perfumery."
+          },
+          {
+            "title": "Chimica & Process Industries",
+            "description": "Leadership tecnica e manageriale per chimica fine, specialty chemicals, coatings e intermedi. Direzione di stabilimento, QHSE con esperienza su siti Seveso, process engineering, R&D di prodotto sostenibile, procurement strategico in contesti di pressione sui margini."
+          },
+          {
+            "title": "Metalmeccanica, Elettronica Industriale & Automazione",
+            "description": "Ingegneria, plant management e supply chain in contesti di precision engineering, componentistica B2B e macchine utensili. A queste competenze si affianca un focus crescente su strumentazione, sensoristica, robotica e automazione di fabbrica — l'asse dove la meccanica italiana incontra l'intelligenza della macchina."
+          },
+          {
+            "title": "Impiantistica, Building Materials & Industria Pesante",
+            "description": "Ricerca di profili per EPC e contracting industriale, oil & gas, power generation, e per i comparti dei materiali da costruzione: cemento, ceramiche, laterizi, vetro, compositi. Filiera capital-intensive, con esigenze manageriali forti su operations, engineering, HSE e gestione di stabilimenti complessi."
           },
           {
             "title": "Packaging",
-            "description": "Soluzioni di talento per l'industria dell'imballaggio. Direzione strategica, R&D engineering, sostenibilità dei materiali e ottimizzazione della supply chain globale e locale."
-          },
-          {
-            "title": "Consulenza Energy",
-            "description": "Ricerca di professionisti per il settore della transizione energetica ed ESCo. Ruoli tecnici, commerciali ed ESG con forte convergenza tra visione strategica e profonda competenza tecnologica."
-          },
-          {
-            "title": "ICT",
-            "description": "Information & Communication Technology. Selezione di profili senior e manageriali per guidare la digital transformation, architetture di sistema, infrastrutture e innovazione tecnologica."
+            "description": "Soluzioni di talento per l'intera filiera dell'imballaggio: OEM di macchine packaging food, beverage e pharma; imballaggi primari farmaceutici; flessibili e sostenibili. Ruoli in plant management, engineering meccatronico, R&D in risposta alla normativa PPWR, supply chain integrata e key account su clienti GMP."
           }
         ],
         "engagement_categories": [
@@ -226,6 +230,13 @@ const resources = {
         "read_abstract": "Leggi abstract",
         "read_article": "Leggi articolo completo",
         "articles": [
+          {
+            "title": "Il Fattore Umano nell'M&A: perché il 70% delle acquisizioni PE fallisce prima ancora di iniziare",
+            "excerpt": "Il problema che nessuno vuole nominare in due diligence, dove si annida il paradosso più costoso del mid-market italiano.",
+            "tag": "Talent Sourcing Advisory",
+            "date": "14 Maggio 2026",
+            "slug": "/insights/fattore-umano-ma"
+          },
           {
             "title": "Paper & Packaging 2026: leggere la trasformazione del settore attraverso la lente del capitale umano",
             "excerpt": "Se la carta grafica perde terreno, il packaging affronta una crescita con vincoli normativi crescenti e competenze sempre più rare: priorità HR e organizzative.",
@@ -352,10 +363,10 @@ const resources = {
       },
       "about": {
         "role": "Talent Acquisition Advisor",
-        "p1": "With nearly 20 years of talent acquisition experience in the Industrial, Life Sciences, and Services sectors, I combine solid recruitment strategy skills with hands-on technical execution.",
+        "p1": "Almost twenty years in talent acquisition, along three trajectories that today converge into a single way of working: the execution of direct searches for the industrial sectors, the delivery experience in the Life Sciences and Healthcare world, and an organizational reading of corporate contexts — because identifying the right people requires first understanding where a role is placed in the organization, who it reports to, and what levers it affects. On these bases, I operate as a freelancer, on selected assignments, from middle management to executive roles.",
         "quote": "\"A resume tells where a person has been. My job is to understand where they can still go — and with whom.\"",
-        "p2": "My background ranges from headhunting for managerial roles, to the launch and management of business lines in the Healthcare/Life Sciences segment, up to more organizational HR consulting.",
-        "p3": "I pair this experience with an advanced technical stack: I independently design, develop, and deploy AI-powered web apps and dashboards on Google Cloud. By automating HR data analysis and leveraging multimodal AI tools (like synthetic video and voice), I transform reporting into always-accessible insights, reducing operational time and delivering higher value to candidates and companies."
+        "p2": "My approach combines direct hunting, structured mapping of the target market, and a professional network built over twenty years of interaction with candidates and clients. Every significant assignment starts from reconstructing the universe of potential profiles and analyzing the typical career trajectories for similar roles in the sector. It is analytical work, not mechanical: the difference between finding a name and choosing the right name lies in the depth with which the market is read and the precision with which the client's organizational context is understood.",
+        "p3": "I combine this method with an independently built technical stack. I design and deploy AI-powered web apps and dashboards on Google Cloud, integrating automated HR data analysis and multimodal artificial intelligence tools — from text-to-speech to video generation. It is delivery infrastructure: it reduces operational time, frees up time for evaluating people, and returns richer and more accessible reporting to candidates and companies."
       },
       "work_areas": {
         "subtitle": "Operative Perimeter",
@@ -371,28 +382,32 @@ const resources = {
         ],
         "sectors": [
           {
-            "title": "Life Sciences, Pharma, MedTech & Cosmetics",
-            "description": "Search and selection for the entire health and wellness ecosystem. Solid expertise in operational and directive roles in production, quality, regulatory affairs, R&D, medical affairs, and sales."
+            "title": "Pharma & Specialty Care",
+            "description": "Search for managerial and specialized figures along the entire ethical drug chain. Consolidated experience in medical affairs, market access, regulatory, brand and hospital sales, covering complex therapeutic areas — oncology, rare diseases, cardiometabolic — and Italian branches of international groups."
           },
           {
-            "title": "Chemical Companies",
-            "description": "Managerial and technical skills for the chemical industry. Identification of operations leadership, QHSE, process engineering, and plant management for multinationals and privately owned groups."
+            "title": "Medical Devices & Diagnostics",
+            "description": "Executive profiles for class IIb/III medical devices, electromedical equipment, IVD, molecular diagnostics and point-of-care. Specific expertise on MDR/IVDR regulatory transitions, hospital channel management and purchasing groups, on tender functions, application and service field."
           },
           {
-            "title": "Metalworking & Machinery",
-            "description": "Engineering, plant management, and supply chain. Targeted interventions for talent acquisition in industrial automation contexts, precision engineering, and lean transformation."
+            "title": "Cosmetics, Fragrances, Hair Care & Consumer Health",
+            "description": "Selection for the worlds of beauty and daily wellness: dermocosmetics, selective perfumery and mass market, professional and retail hair care, OTC, supplements and nutraceuticals. Roles in brand management, trade marketing, innovation & NPD, key account on pharmacy, large-scale retail and perfumery channels."
+          },
+          {
+            "title": "Chemistry & Process Industries",
+            "description": "Technical and managerial leadership for fine chemicals, specialty chemicals, coatings and intermediates. Plant management, QHSE with experience on Seveso sites, process engineering, sustainable product R&D, strategic procurement in margin-pressure contexts."
+          },
+          {
+            "title": "Metalworking, Industrial Electronics & Automation",
+            "description": "Engineering, plant management and supply chain in precision engineering, B2B components and machine tools contexts. Alongside these skills, there is a growing focus on instrumentation, sensors, robotics and factory automation — the axis where Italian mechanics meets machine intelligence."
+          },
+          {
+            "title": "Plant Engineering, Building Materials & Heavy Industry",
+            "description": "Profile search for EPC and industrial contracting, oil & gas, power generation, and for the construction materials sectors: cement, ceramics, bricks, glass, composites. Capital-intensive supply chain, with strong managerial needs in operations, engineering, HSE and complex plant management."
           },
           {
             "title": "Packaging",
-            "description": "Talent solutions for the packaging industry. Strategic direction, R&D engineering, material sustainability, and global/local supply chain optimization."
-          },
-          {
-            "title": "Energy Consulting",
-            "description": "Search for professionals in the energy transition and ESCo sectors. Technical, commercial, and ESG roles with strong convergence between strategic vision and deep technological expertise."
-          },
-          {
-            "title": "ICT",
-            "description": "Information & Communication Technology. Selection of executive and managerial profiles to lead digital transformation, system architectures, infrastructure, and technological innovation."
+            "description": "Talent solutions for the entire packaging supply chain: OEMs of food, beverage and pharma packaging machines; primary pharmaceutical packaging; flexible and sustainable packaging. Roles in plant management, mechatronic engineering, R&D in response to PPWR regulations, integrated supply chain and key account for GMP clients."
           }
         ],
         "engagement_categories": [
@@ -512,6 +527,13 @@ const resources = {
         "read_abstract": "Read abstract",
         "read_article": "Read full article",
         "articles": [
+          {
+            "title": "The Human Factor in M&A: why 70% of PE acquisitions fail before they even start",
+            "excerpt": "The problem no one wants to mention in due diligence, where the most expensive paradox of the Italian mid-market hides.",
+            "tag": "Talent Sourcing Advisory",
+            "date": "May 14th, 2026",
+            "slug": "/insights/fattore-umano-ma"
+          },
           {
             "title": "Paper & Packaging 2026: reading sector transformation through the human capital lens",
             "excerpt": "As graphic paper loses ground, packaging expands with growing compliance constraints and scarce technical skills: HR and organizational priorities.",
