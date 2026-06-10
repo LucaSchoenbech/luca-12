@@ -6,9 +6,9 @@ import { Logo } from '../components/Logo';
 import { useState, useEffect } from 'react';
 
 const HERO_IMAGES = [
-  "https://image.pollinations.ai/prompt/Elegant%20modern%20corporate%20boardroom%2C%20executive%20office%20interior%2C%20high-end%20architecture%2C%20realistic%20photography%2C%20business%20leadership%2C%20no%20text?width=1920&height=1080&nologo=true",
-  "https://image.pollinations.ai/prompt/Abstract%20modern%20architecture%2C%20clean%20lines%2C%20glass%20and%20steel%2C%20warm%20sunlight%2C%20corporate%20elegance%2C%20minimalist%20photography%2C%20no%20text?width=1920&height=1080&nologo=true",
-  "https://image.pollinations.ai/prompt/Close-up%20suit%20fabric%2C%20high-end%20tailoring%2C%20executive%20corporate%20leadership%2C%20texture%20and%20detail%2C%20minimalist%20photography%2C%20no%20text?width=1920&height=1080&nologo=true"
+  "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1920&h=1080",
+  "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1920&h=1080",
+  "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1920&h=1080"
 ];
 
 export default function Home() {
@@ -128,7 +128,7 @@ export default function Home() {
           </div>
           <div className="lg:col-span-5 aspect-square bg-accent-soft p-10 md:p-14 flex flex-col justify-between relative overflow-hidden group border border-accent-soft">
             <motion.img 
-              src="https://image.pollinations.ai/prompt/Architectural%20connection%20spaces%20minimalist%20elegant%20staircase%20bridge%20gallery%20or%20bright%20atrium%20Metaphors%20of%20passage%20and%20meeting%20Neutral%20elegant%20premium%20without%20people%20Minimalist%20architectural%20photography%20clean%20lines%20warm%20natural%20lighting%20high-end%20corporate?width=800&height=800&nologo=true"
+              src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800&h=800"
               className="absolute inset-0 w-full h-full object-cover grayscale mix-blend-multiply opacity-50 group-hover:scale-105 transition-transform duration-1000"
               alt="Architecture connection space"
             />

@@ -27,7 +27,7 @@ export default function Methodology() {
             whileInView={{ scale: 1, filter: "blur(0px)" }}
             viewport={{ once: true }}
             transition={{ duration: 2, ease: "easeOut" }}
-            src="https://image.pollinations.ai/prompt/Abstract%20sophisticated%20architectural%20geometry%2C%20warm%20golden%20lighting%2C%20elegant%20business%20concept%2C%20minimalist%2C%20no%20text?width=1920&height=800&nologo=true" 
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1920&h=800" 
             alt="Methodology architecture"
             className="w-full h-full object-cover grayscale opacity-80 mix-blend-multiply"
           />
@@ -90,7 +90,7 @@ export default function Methodology() {
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1.5 }}
-                src="https://image.pollinations.ai/prompt/Two%20elegant%20professionals%20in%20a%20minimalist%20modern%20boardroom%20during%20a%20meeting%2C%20warm%20ambient%20light%2C%20high-end%20photography%2C%20no%20text?width=1000&height=1000&nologo=true" 
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1000&h=1000" 
                 alt="Professional discussion"
                 className="w-full h-full object-cover grayscale mix-blend-multiply opacity-80"
               />

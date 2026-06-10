@@ -28,7 +28,7 @@ export default function Insights() {
             whileInView={{ scale: 1, opacity: 0.8 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5, ease: "easeOut" }}
-            src="https://image.pollinations.ai/prompt/Elegant%20leather%20bound%20journal%20on%20a%20dark%20wooden%20executive%20desk%2C%20dramatic%20soft%20lighting%2C%20macro%20photography%2C%20business%20insights%2C%20no%20text?width=1920&height=800&nologo=true" 
+            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1920&h=800" 
             alt="Executive insights"
             className="w-full h-full object-cover grayscale mix-blend-multiply"
           />
