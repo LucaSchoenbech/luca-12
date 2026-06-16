@@ -1,8 +1,12 @@
 import { motion } from 'motion/react';
 import { ArrowLeft, Clock, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function TransizioneManagementPmi() {
+  const { t, i18n } = useTranslation();
+  const isEn = i18n.language === 'en';
+
   return (
     <div className="py-24 md:py-48 bg-paper">
       <div className="max-w-4xl mx-auto px-6">
@@ -11,7 +15,7 @@ export default function TransizioneManagementPmi() {
           className="inline-flex items-center space-x-2 text-[10px] uppercase tracking-widest font-bold text-accent hover:text-ink transition-colors mb-16"
         >
           <ArrowLeft size={14} />
-          <span>Torna agli Insights</span>
+          <span>{isEn ? 'Back to Insights' : 'Torna agli Insights'}</span>
         </Link>
         
         <header className="mb-24">
@@ -20,14 +24,18 @@ export default function TransizioneManagementPmi() {
             <div className="h-4 w-[1px] bg-accent-soft" />
             <div className="flex items-center space-x-2 text-[10px] uppercase tracking-widest font-mono text-gray-400">
               <Clock size={12} />
-              <span>Lettura 5 min</span>
+              <span>{isEn ? '5 min read' : 'Lettura 5 min'}</span>
             </div>
           </div>
           <h1 className="text-4xl md:text-6xl font-display font-medium leading-tight mb-8">
-            Guidare la transizione del <br /><span className="italic text-accent">Management Storico.</span>
+            {isEn ? (
+              <>Guiding the transition of <br /><span className="italic text-accent">Historical Management.</span></>
+            ) : (
+              <>Guidare la transizione del <br /><span className="italic text-accent">Management Storico.</span></>
+            )}
           </h1>
           <p className="text-xl md:text-2xl text-gray-500 font-light leading-relaxed">
-            Accelerare l'evoluzione delle PMI italiane, superando il paradosso della lealtà manageriale.
+            {isEn ? 'Accelerating the evolution of Italian SMEs, overcoming the paradox of managerial loyalty.' : 'Accelerare l\'evoluzione delle PMI italiane, superando il paradosso della lealtà manageriale.'}
           </p>
         </header>
 

@@ -126,16 +126,17 @@ export default function Home() {
               <p>{t('home.intro_p2')}</p>
             </div>
           </div>
-          <div className="lg:col-span-5 aspect-square bg-accent-soft p-10 md:p-14 flex flex-col justify-between relative overflow-hidden group border border-accent-soft">
-            <motion.img 
-              src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800&h=800"
-              className="absolute inset-0 w-full h-full object-cover grayscale mix-blend-multiply opacity-50 group-hover:scale-105 transition-transform duration-1000"
-              alt="Architecture connection space"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-accent-soft/80 via-transparent to-transparent mix-blend-multiply" />
-            <div className="relative z-10 flex flex-col justify-end h-full">
+          <div className="lg:col-span-5 flex flex-col gap-10">
+            <div className="aspect-[4/3] md:aspect-square relative overflow-hidden group">
+              <motion.img 
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800&h=800"
+                className="absolute inset-0 w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-1000"
+                alt="Executive workspace"
+              />
+            </div>
+            <div className="border-l-2 border-accent pl-6">
               <p 
-                className="text-xl md:text-2xl lg:text-3xl font-display font-light italic leading-relaxed text-ink"
+                className="text-xl md:text-2xl font-display font-medium italic leading-relaxed text-ink/90"
                 dangerouslySetInnerHTML={{ __html: t('home.experience_quote') }}
               />
             </div>

@@ -1,7 +1,11 @@
 import { ArrowLeft, Clock, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function PaperPackaging2026() {
+  const { t, i18n } = useTranslation();
+  const isEn = i18n.language === 'en';
+
   return (
     <div className="py-24 md:py-48 bg-paper">
       <div className="max-w-4xl mx-auto px-6">
@@ -10,7 +14,7 @@ export default function PaperPackaging2026() {
           className="inline-flex items-center space-x-2 text-[10px] uppercase tracking-widest font-bold text-accent hover:text-ink transition-colors mb-16"
         >
           <ArrowLeft size={14} />
-          <span>Torna agli Insights</span>
+          <span>{isEn ? 'Back to Insights' : 'Torna agli Insights'}</span>
         </Link>
         
         <header className="mb-24">
@@ -19,154 +23,288 @@ export default function PaperPackaging2026() {
             <div className="h-4 w-[1px] bg-accent-soft" />
             <div className="flex items-center space-x-2 text-[10px] uppercase tracking-widest font-mono text-gray-400">
               <Clock size={12} />
-              <span>Lettura 6 min</span>
+              <span>{isEn ? '6 min read' : 'Lettura 6 min'}</span>
             </div>
           </div>
           <h1 className="text-4xl md:text-6xl font-display font-medium leading-tight mb-8 text-ink">
-            Paper & Packaging 2026:<br /> 
-            <span className="italic text-accent">leggere la trasformazione</span>
+            {isEn ? (
+              <>Paper & Packaging 2026:<br /> <span className="italic text-accent">reading the transformation</span></>
+            ) : (
+              <>Paper & Packaging 2026:<br /> <span className="italic text-accent">leggere la trasformazione</span></>
+            )}
           </h1>
           <p className="text-xl md:text-2xl text-gray-500 font-light leading-relaxed">
-            Un'analisi delle dinamiche organizzative e delle priorità HR per il comparto Paper & Packaging attraverso la lente del capitale umano.
+            {isEn ? 'An analysis of organizational dynamics and HR priorities for the Paper & Packaging sector through the lens of human capital.' : 'Un\'analisi delle dinamiche organizzative e delle priorità HR per il comparto Paper & Packaging attraverso la lente del capitale umano.'}
           </p>
         </header>
 
-        <article className="prose prose-lg prose-headings:font-display prose-headings:font-medium text-gray-600 font-light leading-relaxed max-w-none">
-          <p>
-            Il 2026 si apre per il comparto Paper & Packaging in una condizione che merita di essere letta con qualche cautela in più rispetto al consueto. La narrazione del "settore in declino" non descrive più la realtà — o meglio, la descrive solo in parte. Se la carta grafica continua effettivamente a perdere terreno, il packaging vive una fase di espansione che pone interrogativi diversi: non come gestire la contrazione, ma come accompagnare una crescita che incontra vincoli normativi crescenti e una disponibilità di competenze tecniche sempre più sottile. È una distinzione che ha conseguenze concrete sulle scelte organizzative e sulle priorità HR.
-          </p>
+        {isEn ? (
+          <article className="prose prose-lg prose-headings:font-display prose-headings:font-medium text-gray-600 font-light leading-relaxed max-w-none">
+            <p>
+              2026 opens for the Paper & Packaging sector in a condition that deserves to be read with a bit more caution than usual. The narrative of the "declining sector" no longer describes reality — or rather, describes it only partially. While graphic paper actually continues to lose ground, packaging is experiencing a phase of expansion that poses different questions: not how to manage contraction, but how to accompany a growth that meets increasing regulatory constraints and an ever-thinner availability of technical skills. It is a distinction that has concrete consequences on organizational choices and HR priorities.
+            </p>
 
-          <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
-            Un'industria con luci nitide e ombre meno raccontate
-          </h2>
-          <p>
-            L'industria italiana del packaging conserva alcuni primati che rischiamo di dare per scontati. Il tasso di riciclo CONAI vicino al 77%, la concentrazione di competenze meccaniche in distretti come la Packaging Valley emiliana o il polo cartario lucchese, una quota export del machinery che si attesta intorno all'80% — sono dati che raccontano un'eccellenza costruita in decenni. 
-          </p>
-          <p>
-            Vale però la pena leggere accanto a questi numeri anche le tensioni meno visibili: i costi energetici che restano significativamente sopra i livelli pre-2021, la frammentazione di un tessuto produttivo in cui molte realtà sotto i 50 addetti faticano a sostenere investimenti in automazione, e una percezione del settore presso i giovani che non si è ancora aggiornata rispetto a ciò che il packaging è diventato.
-          </p>
-          <p>
-            Sul versante delle dinamiche di mercato, la sostituzione della plastica con fibra cellulosica — la cosiddetta <em>paperization</em> — sta producendo effetti concreti sui volumi, supportata dalla domanda dell'e-commerce e da un food & beverage sempre più attento alla sostenibilità percepita. Allo stesso tempo, la sovracapacità globale, il consolidamento attraverso operazioni di M&A e l'evoluzione regolatoria europea introducono variabili che chiedono letture più sofisticate rispetto al passato.
-          </p>
+            <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
+              An industry with sharp lights and less-told shadows
+            </h2>
+            <p>
+              The Italian packaging industry retains some primacies that we risk taking for granted. The CONAI recycling rate close to 77%, the concentration of mechanical skills in districts like the Emilian Packaging Valley or the Lucca paper district, an export quota of machinery that stands around 80% — these are figures describing an excellence built over decades. 
+            </p>
+            <p>
+              However, it is worth reading alongside these numbers also the less visible tensions: energy costs remaining significantly above pre-2021 levels, the fragmentation of a productive fabric where many entities under 50 employees struggle to sustain investments in automation, and a perception of the sector among young people that has not yet updated compared to what packaging has become.
+            </p>
+            <p>
+              On the market dynamics side, the replacement of plastic with cellulosic fiber — the so-called <em>paperization</em> — is producing concrete effects on volumes, supported by e-commerce demand and a food & beverage sector increasingly attentive to perceived sustainability. At the same time, global overcapacity, consolidation through M&A operations, and the European regulatory evolution introduce variables that demand more sophisticated readings than in the past.
+            </p>
 
-          <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
-            Il PPWR come occasione di ridisegno organizzativo
-          </h2>
-          <p>
-            Con l'entrata nella piena operatività del Regolamento PPWR e della Direttiva Green Claims, molte aziende stanno scoprendo che la compliance non è solo un tema legale, ma un'occasione per ridisegnare ruoli e responsabilità. Stanno emergendo profili che fino a pochi anni fa non esistevano nelle organizzazioni:
-          </p>
-          <ul className="list-disc pl-5 mt-4 mb-8 space-y-4">
-            <li><strong>Il Packaging Compliance Manager:</strong> figura ibrida che dialoga con legale, R&D e operations.</li>
-            <li><strong>Specialisti del Passaporto Digitale del Prodotto:</strong> chiamati a strutturare flussi informativi lungo l'intera filiera.</li>
-            <li><strong>L'EPR Compliance Manager:</strong> che presidia la responsabilità di fine vita.</li>
-            <li><strong>Il Sustainable Packaging Designer:</strong> con competenze sui biopolimeri.</li>
-            <li><strong>L'LCA Specialist:</strong> focalizzato sull'analisi del ciclo di vita.</li>
-          </ul>
-          <p>
-            La domanda interessante, da una prospettiva HR, non è tanto "come trovare queste persone" — perché spesso non esistono ancora sul mercato — quanto "come costruirle internamente, partendo da quali profili adiacenti". È una conversazione che richiede tempo e che si svolge meglio in sede di workforce planning che in fase di selezione urgente.
-          </p>
+            <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
+              The PPWR as an organizational redesign opportunity
+            </h2>
+            <p>
+              With the entry into full operation of the PPWR Regulation and the Green Claims Directive, many companies are discovering that compliance is not just a legal issue, but an opportunity to redesign roles and responsibilities. Profiles are emerging that did not exist in organizations until a few years ago:
+            </p>
+            <ul className="list-disc pl-5 mt-4 mb-8 space-y-4">
+              <li><strong>The Packaging Compliance Manager:</strong> a hybrid figure dialoguing with legal, R&D, and operations.</li>
+              <li><strong>Digital Product Passport Specialists:</strong> called to structure information flows along the entire supply chain.</li>
+              <li><strong>The EPR Compliance Manager:</strong> who oversees end-of-life responsibility.</li>
+              <li><strong>The Sustainable Packaging Designer:</strong> with skills in biopolymers.</li>
+              <li><strong>The LCA Specialist:</strong> focused on life cycle analysis.</li>
+            </ul>
+            <p>
+              The interesting question, from an HR perspective, is not so much "how to find these people" — because they often don't exist on the market yet — but rather "how to build them internally, starting from adjacent profiles". It is a conversation that requires time and is better held during workforce planning rather than in an urgent selection phase.
+            </p>
 
-          <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
-            I numeri che meritano attenzione
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
-            <div className="p-6 border border-accent-soft rounded">
-              <h4 className="text-2xl font-display text-accent mb-2">60%</h4>
-              <p className="text-sm">dei label converters segnala difficoltà nel reperire operatori adeguatamente formati.</p>
+            <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
+              Numbers that deserve attention
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+              <div className="p-6 border border-accent-soft rounded">
+                <h4 className="text-2xl font-display text-accent mb-2">60%</h4>
+                <p className="text-sm">of label converters report difficulty in finding adequately trained operators.</p>
+              </div>
+              <div className="p-6 border border-accent-soft rounded">
+                <h4 className="text-2xl font-display text-accent mb-2">65%</h4>
+                <p className="text-sm">of companies have completed significant robotic upgrades in the last 18 months.</p>
+              </div>
+              <div className="p-6 border border-accent-soft rounded">
+                <h4 className="text-2xl font-display text-accent mb-2">10-18%</h4>
+                <p className="text-sm">the annual salary increase on critical technical roles and compliance profiles.</p>
+              </div>
+              <div className="p-6 border border-accent-soft rounded">
+                <h4 className="text-2xl font-display text-accent mb-2">€13.9B</h4>
+                <p className="text-sm">the projected value for the Italian paper-based packaging market by 2033.</p>
+              </div>
             </div>
-            <div className="p-6 border border-accent-soft rounded">
-              <h4 className="text-2xl font-display text-accent mb-2">65%</h4>
-              <p className="text-sm">delle aziende ha completato upgrades significativi in chiave robotica negli ultimi 18 mesi.</p>
+            <p>
+              However, there is a figure that, in our conversations with clients, is becoming increasingly central: about half of the boomer population is close to exiting. The risk is not only quantitative but qualitative — it concerns that tacit know-how, accumulated in decades of practice, that no formalized procedure truly captures. Managing this generational transition is probably the most underestimated HR challenge of the moment.
+            </p>
+
+            <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
+              The production operator: a silently evolving figure
+            </h2>
+            <p>
+              One of the most interesting transformations — and least visible from the outside — concerns the operational role. We are moving, relatively quickly, from the traditional profile made of manual skills and long setups to the so-called <em>digital native</em> coming out of ITS, accustomed to touch HMI interfaces and with basic coding notions.
+            </p>
+            <p>
+              From there, we get to the All-in-One Operator, capable of coordinating digital printing, flexo, and inline die-cutting, up to the Process Leader dedicated to remote supervision, OEE analysis, and predictive maintenance. These are paths that typically develop over one or two years of structured development. Facing them without a training pipeline thought out in advance means undergoing them.
+            </p>
+
+            <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
+              The contract renewal: a variable to monitor
+            </h2>
+            <p>
+              In January 2026, the renewal of the Paper and Cardboard National Collective Labour Agreement, which expired at the end of 2024, remains at a standstill. Trade union requests focus on basic salary increases around 200-250 euros per month, mandatory continuous training, greater protections for precarious work, and the strengthening of contractual welfare.
+            </p>
+            <p>
+              Employer positions point back to energy costs and competitive pressure, leaning towards productivity-linked bonuses and greater hourly flexibility. For an order of magnitude, a paper converting company with 50 employees could see cost impacts in the range of 120-150 thousand euros per year. The realistic scenario is that of rising conflict in the first quarter, with possible individual company agreements in more marginal realities. For HR functions it simply means equipping oneself in advance with alternative scenarios.
+            </p>
+
+            <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
+              Some thoughts on 2026 HR priorities
+            </h2>
+            <p>From these dynamics, some directions are emerging that, in conversations with our clients, are showing major traction:</p>
+            <ul className="list-decimal pl-5 mt-4 space-y-4">
+              <li>
+                <strong>The time horizon:</strong> The "stop and replace" model — a profile leaves, I look for an equivalent one on the market — is becoming progressively less sustainable. A Strategic Workforce Planning over a three-year horizon is needed, integrating production scenarios, internal demographics, and supply chain dynamics.
+              </li>
+              <li>
+                <strong>The narrative:</strong> The sector continues to suffer from a perception that no longer corresponds to the reality of more advanced production environments. Companies like Fedrigoni or Sofidel have shown that it is possible to build credible employer branding around the high-tech and green dimensions of packaging.
+              </li>
+              <li>
+                <strong>The entry pipeline:</strong> The ITS — in particular ITS Maker and ITS Nuove Tecnologie della Vita — are proving to be a precious channel for profiles ready for insertion. Building stable relationships with these entities is becoming a concrete competitive advantage.
+              </li>
+              <li>
+                <strong>Organizational ergonomics:</strong> The Human-Centric Manufacturing model — which automates heavy tasks and rethinks environments to be cleaner, air-conditioned, and safer — is a significant attractiveness lever to expand the recruitment base.
+              </li>
+              <li>
+                <strong>Personalized welfare:</strong> In a context of inflationary pressure on wages, structured welfare (supplementary health care, flexibility, parenting) is proving a higher-than-expected impact on retention.
+              </li>
+            </ul>
+
+            <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
+              Areas where specialization counts more than generality
+            </h2>
+            <p>
+              Three areas deserve specific attention because they concentrate a disproportionate part of the technical complexity:
+            </p>
+            <ul className="list-disc pl-5 mt-4 space-y-2">
+              <li><strong>Food Contact Materials (FCM):</strong> where the increase in recycled content introduces new risks (e.g., mineral oils) requiring top-level laboratories and analytical skills.</li>
+              <li><strong>Smart labels (RFID, NFC, dynamic QRs):</strong> bringing IT skills into segments, like wine and luxury, where until recently they were peripheral.</li>
+              <li><strong>EPR compliance:</strong> transforming purchasing functions into real Supply Chain Risk Management structures, responsible for ethical and environmental traceability.</li>
+            </ul>
+
+            <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
+              In summary
+            </h2>
+            <p>
+              2026 does not present itself as a year of ordinary management, but neither as a generalized emergency. It is rather a year in which organizational choices made today will have visible effects in eighteen to thirty-six months. 
+            </p>
+            <p>
+              The divergence between graphic paper and packaging calls for targeted reconversion strategies; the wage gap with Germany and the Netherlands on some profiles calls to rethink remuneration models without waiting to be forced by candidates; competition on hybrid roles is played at the intersection of technology, narrative and welfare.
+            </p>
+            <p className="font-medium text-accent border-l-4 border-accent pl-4 italic mt-8">
+              The companies that are tackling this phase best are not necessarily the largest, but those that have stopped viewing transformation as a recruitment problem and begun reading it as an organizational design issue. It's a subtle distinction, but in the medium term, it makes all the difference.
+            </p>
+
+          </article>
+        ) : (
+          <article className="prose prose-lg prose-headings:font-display prose-headings:font-medium text-gray-600 font-light leading-relaxed max-w-none">
+            <p>
+              Il 2026 si apre per il comparto Paper & Packaging in una condizione che merita di essere letta con qualche cautela in più rispetto al consueto. La narrazione del "settore in declino" non descrive più la realtà — o meglio, la descrive solo in parte. Se la carta grafica continua effettivamente a perdere terreno, il packaging vive una fase di espansione che pone interrogativi diversi: non come gestire la contrazione, ma come accompagnare una crescita che incontra vincoli normativi crescenti e una disponibilità di competenze tecniche sempre più sottile. È una distinzione che ha conseguenze concrete sulle scelte organizzative e sulle priorità HR.
+            </p>
+
+            <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
+              Un'industria con luci nitide e ombre meno raccontate
+            </h2>
+            <p>
+              L'industria italiana del packaging conserva alcuni primati che rischiamo di dare per scontati. Il tasso di riciclo CONAI vicino al 77%, la concentrazione di competenze meccaniche in distretti come la Packaging Valley emiliana o il polo cartario lucchese, una quota export del machinery che si attesta intorno all'80% — sono dati che raccontano un'eccellenza costruita in decenni. 
+            </p>
+            <p>
+              Vale però la pena leggere accanto a questi numeri anche le tensioni meno visibili: i costi energetici che restano significativamente sopra i livelli pre-2021, la frammentazione di un tessuto produttivo in cui molte realtà sotto i 50 addetti faticano a sostenere investimenti in automazione, e una percezione del settore presso i giovani che non si è ancora aggiornata rispetto a ciò che il packaging è diventato.
+            </p>
+            <p>
+              Sul versante delle dinamiche di mercato, la sostituzione della plastica con fibra cellulosica — la cosiddetta <em>paperization</em> — sta producendo effetti concreti sui volumi, supportata dalla domanda dell'e-commerce e da un food & beverage sempre più attento alla sostenibilità percepita. Allo stesso tempo, la sovracapacità globale, il consolidamento attraverso operazioni di M&A e l'evoluzione regolatoria europea introducono variabili che chiedono letture più sofisticate rispetto al passato.
+            </p>
+
+            <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
+              Il PPWR come occasione di ridisegno organizzativo
+            </h2>
+            <p>
+              Con l'entrata nella piena operatività del Regolamento PPWR e della Direttiva Green Claims, molte aziende stanno scoprendo che la compliance non è solo un tema legale, ma un'occasione per ridisegnare ruoli e responsabilità. Stanno emergendo profili che fino a pochi anni fa non esistevano nelle organizzazioni:
+            </p>
+            <ul className="list-disc pl-5 mt-4 mb-8 space-y-4">
+              <li><strong>Il Packaging Compliance Manager:</strong> figura ibrida che dialoga con legale, R&D e operations.</li>
+              <li><strong>Specialisti del Passaporto Digitale del Prodotto:</strong> chiamati a strutturare flussi informativi lungo l'intera filiera.</li>
+              <li><strong>L'EPR Compliance Manager:</strong> che presidia la responsabilità di fine vita.</li>
+              <li><strong>Il Sustainable Packaging Designer:</strong> con competenze sui biopolimeri.</li>
+              <li><strong>L'LCA Specialist:</strong> focalizzato sull'analisi del ciclo di vita.</li>
+            </ul>
+            <p>
+              La domanda interessante, da una prospettiva HR, non è tanto "come trovare queste persone" — perché spesso non esistono ancora sul mercato — quanto "come costruirle internamente, partendo da quali profili adiacenti". È una conversazione che richiede tempo e che si svolge meglio in sede di workforce planning che in fase di selezione urgente.
+            </p>
+
+            <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
+              I numeri che meritano attenzione
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+              <div className="p-6 border border-accent-soft rounded">
+                <h4 className="text-2xl font-display text-accent mb-2">60%</h4>
+                <p className="text-sm">dei label converters segnala difficoltà nel reperire operatori adeguatamente formati.</p>
+              </div>
+              <div className="p-6 border border-accent-soft rounded">
+                <h4 className="text-2xl font-display text-accent mb-2">65%</h4>
+                <p className="text-sm">delle aziende ha completato upgrades significativi in chiave robotica negli ultimi 18 mesi.</p>
+              </div>
+              <div className="p-6 border border-accent-soft rounded">
+                <h4 className="text-2xl font-display text-accent mb-2">10-18%</h4>
+                <p className="text-sm">l'incremento retributivo annuo sui ruoli tecnici critici e profili compliance.</p>
+              </div>
+              <div className="p-6 border border-accent-soft rounded">
+                <h4 className="text-2xl font-display text-accent mb-2">€13.9 Mld</h4>
+                <p className="text-sm">il valore proiettato per il mercato italiano del paper-based packaging entro il 2033.</p>
+              </div>
             </div>
-            <div className="p-6 border border-accent-soft rounded">
-              <h4 className="text-2xl font-display text-accent mb-2">10-18%</h4>
-              <p className="text-sm">l'incremento retributivo annuo sui ruoli tecnici critici e profili compliance.</p>
-            </div>
-            <div className="p-6 border border-accent-soft rounded">
-              <h4 className="text-2xl font-display text-accent mb-2">€13.9 Mld</h4>
-              <p className="text-sm">il valore proiettato per il mercato italiano del paper-based packaging entro il 2033.</p>
-            </div>
-          </div>
-          <p>
-            C'è però un dato che, nelle nostre conversazioni con i clienti, sta diventando sempre più centrale: circa metà della popolazione boomer è prossima all'uscita. Il rischio non è solo quantitativo, ma qualitativo — riguarda quel know-how tacito, accumulato in decenni di pratica, che nessuna procedura formalizzata cattura davvero. La gestione di questa transizione generazionale è probabilmente la sfida HR più sottovalutata del momento.
-          </p>
+            <p>
+              C'è però un dato che, nelle nostre conversazioni con i clienti, sta diventando sempre più centrale: circa metà della popolazione boomer è prossima all'uscita. Il rischio non è solo quantitativo, ma qualitativo — riguarda quel know-how tacito, accumulato in decenni di pratica, che nessuna procedura formalizzata cattura davvero. La gestione di questa transizione generazionale è probabilmente la sfida HR più sottovalutata del momento.
+            </p>
 
-          <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
-            L'operatore di produzione: una figura in evoluzione silenziosa
-          </h2>
-          <p>
-            Una delle trasformazioni più interessanti — e meno visibili dall'esterno — riguarda il ruolo operativo. Si sta passando, in tempi relativamente rapidi, dal profilo tradizionale fatto di manualità e setup lunghi al cosiddetto <em>digital native</em> uscito dagli ITS, abituato a interfacce HMI touch e con nozioni base di coding.
-          </p>
-          <p>
-            Da lì si arriva all'All-in-One Operator, capace di coordinare stampa digitale, flexo e fustellatura in linea, fino al Process Leader dedicato a supervisione remota, analisi OEE e manutenzione predittiva. Sono percorsi che si articolano tipicamente su uno o due anni di sviluppo strutturato. Affrontarli senza una pipeline formativa pensata in anticipo significa subirli.
-          </p>
+            <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
+              L'operatore di produzione: una figura in evoluzione silenziosa
+            </h2>
+            <p>
+              Una delle trasformazioni più interessanti — e meno visibili dall'esterno — riguarda il ruolo operativo. Si sta passando, in tempi relativamente rapidi, dal profilo tradizionale fatto di manualità e setup lunghi al cosiddetto <em>digital native</em> uscito dagli ITS, abituato a interfacce HMI touch e con nozioni base di coding.
+            </p>
+            <p>
+              Da lì si arriva all'All-in-One Operator, capace di coordinare stampa digitale, flexo e fustellatura in linea, fino al Process Leader dedicato a supervisione remota, analisi OEE e manutenzione predittiva. Sono percorsi che si articolano tipicamente su uno o due anni di sviluppo strutturato. Affrontarli senza una pipeline formativa pensata in anticipo significa subirli.
+            </p>
 
-          <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
-            Il rinnovo del CCNL: una variabile da monitorare
-          </h2>
-          <p>
-            A gennaio 2026 il rinnovo del CCNL Carta e Cartotecnica, scaduto a fine 2024, resta in una fase di stallo. Le richieste sindacali si concentrano su aumenti tabellari nell'ordine dei 200-250 euro mensili, formazione continua obbligatoria, maggiori tutele per il lavoro precario e potenziamento del welfare contrattuale. 
-          </p>
-          <p>
-            Le posizioni datoriali richiamano i costi energetici e la pressione competitiva, orientandosi verso premi legati alla produttività e maggiore flessibilità oraria. Per dare un ordine di grandezza, una cartotecnica con 50 dipendenti potrebbe vedere impatti di costo nell'intervallo dei 120-150 mila euro annui. Lo scenario realistico è quello di una conflittualità in aumento nel primo trimestre, con possibili accordi aziendali individuali nelle realtà più marginali. Per le funzioni HR significa, banalmente, dotarsi per tempo di scenari alternativi.
-          </p>
+            <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
+              Il rinnovo del CCNL: una variabile da monitorare
+            </h2>
+            <p>
+              A gennaio 2026 il rinnovo del CCNL Carta e Cartotecnica, scaduto a fine 2024, resta in una fase di stallo. Le richieste sindacali si concentrano su aumenti tabellari nell'ordine dei 200-250 euro mensili, formazione continua obbligatoria, maggiori tutele per il lavoro precario e potenziamento del welfare contrattuale. 
+            </p>
+            <p>
+              Le posizioni datoriali richiamano i costi energetici e la pressione competitiva, orientandosi verso premi legati alla produttività e maggiore flessibilità oraria. Per dare un ordine di grandezza, una cartotecnica con 50 dipendenti potrebbe vedere impatti di costo nell'intervallo dei 120-150 mila euro annui. Lo scenario realistico è quello di una conflittualità in aumento nel primo trimestre, con possibili accordi aziendali individuali nelle realtà più marginali. Per le funzioni HR significa, banalmente, dotarsi per tempo di scenari alternativi.
+            </p>
 
-          <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
-            Alcune riflessioni sulle priorità HR del 2026
-          </h2>
-          <p>Da queste dinamiche emergono alcune direzioni che, nelle conversazioni con i nostri clienti, stanno mostrando maggiore traction:</p>
-          <ul className="list-decimal pl-5 mt-4 space-y-4">
-            <li>
-              <strong>L'orizzonte temporale:</strong> Il modello "stop and replace" — esco un profilo, ne cerco uno equivalente sul mercato — sta diventando progressivamente meno sostenibile. Serve uno Strategic Workforce Planning su orizzonte triennale, che integri scenari produttivi, demografia interna e dinamiche di filiera.
-            </li>
-            <li>
-              <strong>La narrazione:</strong> Il settore continua a soffrire di una percezione che non corrisponde più alla realtà degli ambienti produttivi più avanzati. Aziende come Fedrigoni o Sofidel hanno dimostrato che è possibile costruire un employer branding credibile attorno alle dimensioni high-tech e green del packaging.
-            </li>
-            <li>
-              <strong>La pipeline di ingresso:</strong> Gli ITS — in particolare ITS Maker e ITS Nuove Tecnologie della Vita — si stanno rivelando un canale prezioso per profili pronti all'inserimento. Costruire relazioni stabili con questi enti sta diventando un vantaggio competitivo concreto.
-            </li>
-            <li>
-              <strong>L'ergonomia organizzativa:</strong> Il modello Human-Centric Manufacturing — che automatizza i compiti gravosi e ripensa gli ambienti in chiave più pulita, climatizzata, sicura — è una leva di attrattività significativa per ampliare la base di reclutamento.
-            </li>
-            <li>
-              <strong>Welfare personalizzato:</strong> In un contesto di pressione inflattiva sulle retribuzioni, il welfare strutturato (sanità integrativa, flessibilità, genitorialità) sta dimostrando un impatto sulla retention superiore alle aspettative.
-            </li>
-          </ul>
+            <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
+              Alcune riflessioni sulle priorità HR del 2026
+            </h2>
+            <p>Da queste dinamiche emergono alcune direzioni che, nelle conversazioni con i nostri clienti, stanno mostrando maggiore traction:</p>
+            <ul className="list-decimal pl-5 mt-4 space-y-4">
+              <li>
+                <strong>L'orizzonte temporale:</strong> Il modello "stop and replace" — esco un profilo, ne cerco uno equivalente sul mercato — sta diventando progressivamente meno sostenibile. Serve uno Strategic Workforce Planning su orizzonte triennale, che integri scenari produttivi, demografia interna e dinamiche di filiera.
+              </li>
+              <li>
+                <strong>La narrazione:</strong> Il settore continua a soffrire di una percezione che non corrisponde più alla realtà degli ambienti produttivi più avanzati. Aziende come Fedrigoni o Sofidel hanno dimostrato che è possibile costruire un employer branding credibile attorno alle dimensioni high-tech e green del packaging.
+              </li>
+              <li>
+                <strong>La pipeline di ingresso:</strong> Gli ITS — in particolare ITS Maker e ITS Nuove Tecnologie della Vita — si stanno rivelando un canale prezioso per profili pronti all'inserimento. Costruire relazioni stabili con questi enti sta diventando un vantaggio competitivo concreto.
+              </li>
+              <li>
+                <strong>L'ergonomia organizzativa:</strong> Il modello Human-Centric Manufacturing — che automatizza i compiti gravosi e ripensa gli ambienti in chiave più pulita, climatizzata, sicura — è una leva di attrattività significativa per ampliare la base di reclutamento.
+              </li>
+              <li>
+                <strong>Welfare personalizzato:</strong> In un contesto di pressione inflattiva sulle retribuzioni, il welfare strutturato (sanità integrativa, flessibilità, genitorialità) sta dimostrando un impatto sulla retention superiore alle aspettative.
+              </li>
+            </ul>
 
-          <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
-            Aree dove la specializzazione conta più della generalità
-          </h2>
-          <p>
-            Tre ambiti meritano un'attenzione specifica perché concentrano una parte sproporzionata della complessità tecnica:
-          </p>
-          <ul className="list-disc pl-5 mt-4 space-y-2">
-            <li><strong>Materiali a Contatto con Alimenti (MOCA):</strong> dove l'aumento dei contenuti riciclati introduce nuovi rischi (es. oli minerali) richiedendo laboratori e competenze analitiche di livello.</li>
-            <li><strong>Le etichette intelligenti (RFID, NFC, QR dinamici):</strong> che stanno portando competenze IT in segmenti, come il vino e il lusso, dove fino a poco fa erano periferiche.</li>
-            <li><strong>La compliance EPR:</strong> che sta trasformando le funzioni acquisti in vere e proprie strutture di Supply Chain Risk Management, con responsabilità sulla tracciabilità etica e ambientale.</li>
-          </ul>
+            <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
+              Aree dove la specializzazione conta più della generalità
+            </h2>
+            <p>
+              Tre ambiti meritano un'attenzione specifica perché concentrano una parte sproporzionata della complessità tecnica:
+            </p>
+            <ul className="list-disc pl-5 mt-4 space-y-2">
+              <li><strong>Materiali a Contatto con Alimenti (MOCA):</strong> dove l'aumento dei contenuti riciclati introduce nuovi rischi (es. oli minerali) richiedendo laboratori e competenze analitiche di livello.</li>
+              <li><strong>Le etichette intelligenti (RFID, NFC, QR dinamici):</strong> che stanno portando competenze IT in segmenti, come il vino e il lusso, dove fino a poco fa erano periferiche.</li>
+              <li><strong>La compliance EPR:</strong> che sta trasformando le funzioni acquisti in vere e proprie strutture di Supply Chain Risk Management, con responsabilità sulla tracciabilità etica e ambientale.</li>
+            </ul>
 
-          <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
-            In sintesi
-          </h2>
-          <p>
-            Il 2026 non si presenta come un anno di gestione ordinaria, ma neanche come un'emergenza generalizzata. È piuttosto un anno in cui le scelte organizzative fatte oggi avranno effetti visibili tra diciotto e trentasei mesi. 
-          </p>
-          <p>
-            La divergenza tra carta grafica e packaging chiede strategie di riconversione mirate; il gap retributivo con Germania e Paesi Bassi su alcuni profili invita a ripensare i modelli retributivi senza attendere forzature dai candidati; la competizione sui ruoli ibridi si gioca sull'intersezione tra tecnologia, narrazione e welfare.
-          </p>
-          <p className="font-medium text-accent border-l-4 border-accent pl-4 italic mt-8">
-            Le aziende che stanno affrontando meglio questa fase non sono necessariamente le più grandi, ma quelle che hanno smesso di leggere la trasformazione come un problema di reclutamento e hanno iniziato a leggerla come un tema di disegno organizzativo. È una distinzione sottile ma, sul medio periodo, fa la differenza.
-          </p>
+            <h2 className="text-3xl mt-16 mb-8 text-ink border-b border-accent-soft pb-4">
+              In sintesi
+            </h2>
+            <p>
+              Il 2026 non si presenta come un anno di gestione ordinaria, ma neanche come un'emergenza generalizzata. È piuttosto un anno in cui le scelte organizzative fatte oggi avranno effetti visibili tra diciotto e trentasei mesi. 
+            </p>
+            <p>
+              La divergenza tra carta grafica e packaging chiede strategie di riconversione mirate; il gap retributivo con Germania e Paesi Bassi su alcuni profili invita a ripensare i modelli retributivi senza attendere forzature dai candidati; la competizione sui ruoli ibridi si gioca sull'intersezione tra tecnologia, narrazione e welfare.
+            </p>
+            <p className="font-medium text-accent border-l-4 border-accent pl-4 italic mt-8">
+              Le aziende che stanno affrontando meglio questa fase non sono necessariamente le più grandi, ma quelle che hanno smesso di leggere la trasformazione come un problema di reclutamento e hanno iniziato a leggerla come un tema di disegno organizzativo. È una distinzione sottile ma, sul medio periodo, fa la differenza.
+            </p>
 
-        </article>
+          </article>
+        )}
 
         <div className="mt-24 pt-16 border-t border-accent-soft">
           <div className="mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-medium text-ink mb-4">
-              Fonti & Riferimenti
+              {isEn ? 'Sources & References' : 'Fonti & Riferimenti'}
             </h2>
             <p className="text-gray-500 font-light">
-              Documentazione utilizzata per l'elaborazione di questo dashboard strategico (Paper & Packaging 2026).
+              {isEn ? 'Documentation used to elaborate this strategic dashboard (Paper & Packaging 2026).' : 'Documentazione utilizzata per l\'elaborazione di questo dashboard strategico (Paper & Packaging 2026).'}
             </p>
           </div>
           

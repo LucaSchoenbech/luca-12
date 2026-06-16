@@ -1,8 +1,12 @@
 import { motion } from 'motion/react';
 import { ArrowLeft, Clock, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function AnalyticalHeadhunting() {
+  const { t, i18n } = useTranslation();
+  const isEn = i18n.language === 'en';
+
   return (
     <div className="py-24 md:py-48 bg-paper">
       <div className="max-w-4xl mx-auto px-6">
@@ -11,7 +15,7 @@ export default function AnalyticalHeadhunting() {
           className="inline-flex items-center space-x-2 text-[10px] uppercase tracking-widest font-bold text-accent hover:text-ink transition-colors mb-16"
         >
           <ArrowLeft size={14} />
-          <span>Torna alla Metodologia</span>
+          <span>{isEn ? 'Back to Methodology' : 'Torna alla Metodologia'}</span>
         </Link>
         
         <header className="mb-24">
@@ -20,14 +24,18 @@ export default function AnalyticalHeadhunting() {
             <div className="h-4 w-[1px] bg-accent-soft" />
             <div className="flex items-center space-x-2 text-[10px] uppercase tracking-widest font-mono text-gray-400">
               <Clock size={12} />
-              <span>Lettura 4 min</span>
+              <span>{isEn ? '4 min read' : 'Lettura 4 min'}</span>
             </div>
           </div>
           <h1 className="text-4xl md:text-6xl font-display font-medium leading-tight mb-8">
-            Prima dei candidati, <span className="italic text-accent">il mercato.</span>
+            {isEn ? (
+              <>Before the candidates, <span className="italic text-accent">the market.</span></>
+            ) : (
+              <>Prima dei candidati, <span className="italic text-accent">il mercato.</span></>
+            )}
           </h1>
           <p className="text-xl md:text-2xl text-gray-500 font-light leading-relaxed">
-            Ogni progetto di executive search nasce da una lettura strutturata dell'ecosistema in cui opera la figura ricercata. Prima di aprire la ricerca, costruiamo una mappa strategica del mercato di riferimento — uno strumento di lavoro condiviso con il cliente, non un esercizio interno alla nostra metodologia.
+            {isEn ? 'Every executive search project is born from a structured reading of the ecosystem in which the sought figure operates. Before opening the search, we build a strategic map of the reference market — a working tool shared with the client, not an internal exercise in our methodology.' : 'Ogni progetto di executive search nasce da una lettura strutturata dell\'ecosistema in cui opera la figura ricercata. Prima di aprire la ricerca, costruiamo una mappa strategica del mercato di riferimento — uno strumento di lavoro condiviso con il cliente, non un esercizio interno alla nostra metodologia.'}
           </p>
         </header>
 
@@ -116,16 +124,16 @@ export default function AnalyticalHeadhunting() {
       <div className="bg-ink text-paper py-24 px-6 mt-24">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-display font-medium text-white mb-8">
-            Vuoi vedere come mappiamo il mercato per il tuo prossimo mandato?
+            {isEn ? 'Want to see how we map the market for your next mandate?' : 'Vuoi vedere come mappiamo il mercato per il tuo prossimo mandato?'}
           </h2>
           <p className="text-xl text-gray-400 font-light leading-relaxed mb-12">
-            Ogni progetto inizia con una sessione di briefing strategico: un confronto in cui definiamo insieme il perimetro della ricerca, le priorità di scouting e i criteri di valutazione. È il primo passo per costruire una mappatura realmente utile alla decisione.
+            {isEn ? 'Every project begins with a strategic briefing session: a discussion where we define together the scope of the search, scouting priorities, and evaluation criteria. It is the first step to building a mapping that is truly useful for decision-making.' : 'Ogni progetto inizia con una sessione di briefing strategico: un confronto in cui definiamo insieme il perimetro della ricerca, le priorità di scouting e i criteri di valutazione. È il primo passo per costruire una mappatura realmente utile alla decisione.'}
           </p>
           <Link 
             to="/contatti"
             className="inline-block px-8 py-4 bg-accent text-ink text-sm font-bold tracking-widest uppercase hover:bg-white transition-colors"
           >
-            Richiedi un briefing strategico
+            {isEn ? 'Request a strategic briefing' : 'Richiedi un briefing strategico'}
           </Link>
         </div>
       </div>
