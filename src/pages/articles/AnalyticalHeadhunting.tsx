@@ -27,7 +27,7 @@ export default function AnalyticalHeadhunting() {
               <span>{isEn ? '4 min read' : 'Lettura 4 min'}</span>
             </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-display font-medium leading-tight mb-8">
+          <h1 className="text-4xl md:text-6xl font-display font-medium leading-tight mb-8 break-words">
             {isEn ? (
               <>Before the candidates, <span className="italic text-accent">the market.</span></>
             ) : (

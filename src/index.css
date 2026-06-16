@@ -22,7 +22,8 @@
   }
 
   h1, h2, h3, h4 {
-    @apply font-display tracking-tight font-light;
+    @apply font-display tracking-tight font-light break-words;
+    hyphens: none;
   }
 }
 

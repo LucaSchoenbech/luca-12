@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Mail, Linkedin, MapPin, ArrowRight } from 'lucide-react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
@@ -55,7 +55,7 @@ export default function Contact() {
           
           <div className="space-y-24">
             <h1 
-              className="text-6xl md:text-8xl font-display font-light mb-12"
+              className="text-4xl sm:text-5xl md:text-8xl font-display font-light mb-8 sm:mb-12 leading-tight tracking-tight break-words"
               dangerouslySetInnerHTML={{ __html: t('contact.title') }}
             />
             

@@ -14,7 +14,7 @@ export default function Insights() {
         <header className="max-w-4xl mb-32">
           <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-accent mb-8 block">{t('insights.subtitle')}</span>
           <h1 
-            className="text-6xl md:text-[7rem] font-display font-light mb-12 leading-[0.85] tracking-tighter"
+            className="text-[2.5rem] sm:text-5xl md:text-[7rem] font-display font-light mb-12 leading-tight md:leading-[0.85] tracking-tight"
             dangerouslySetInnerHTML={{ __html: t('insights.title') }}
           />
           <p className="text-xl md:text-2xl text-gray-500 font-light leading-relaxed max-w-2xl">

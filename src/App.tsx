@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import React from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import Layout from './components/Layout';
 import Home from './pages/Home';
@@ -40,6 +41,7 @@ function AnimatedRoutes() {
   const location = useLocation();
   return (
     <AnimatePresence mode="wait">
+      {/* @ts-ignore - React Router v6 Routes accepts key intrinsically but types sometimes complain */}
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<PageTransition><Home /></PageTransition>} />
         <Route path="/chi-sono" element={<PageTransition><About /></PageTransition>} />

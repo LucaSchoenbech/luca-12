@@ -1,10 +1,10 @@
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
-import { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
 
-const CategoryCarousel = ({ category, items }: { category: string, items: Array<{ role: string, company: string, description: string }> }) => {
+const CategoryCarousel: React.FC<{ category: string, items: Array<{ role: string, company: string, description: string }> }> = ({ category, items }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'center',
     loop: true,
@@ -104,7 +104,7 @@ export default function WorkAreas() {
         <header className="max-w-4xl mb-48">
           <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-accent mb-8 block">{t('work_areas.subtitle')}</span>
           <h1 
-            className="text-6xl md:text-[7rem] font-display font-light mb-12 leading-[0.85] tracking-tighter"
+            className="text-[2.5rem] sm:text-5xl md:text-[7rem] font-display font-light mb-12 leading-tight md:leading-[0.85] tracking-tight"
             dangerouslySetInnerHTML={{ __html: t('work_areas.title') }}
           />
           <p className="text-xl md:text-2xl text-gray-500 font-light leading-relaxed max-w-2xl">
