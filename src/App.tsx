@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import { AnimatePresence, motion } from 'motion/react';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -22,25 +23,47 @@ function ScrollToTop() {
   return null;
 }
 
+function PageTransition({ children }: { children: React.ReactNode }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+function AnimatedRoutes() {
+  const location = useLocation();
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+        <Route path="/chi-sono" element={<PageTransition><About /></PageTransition>} />
+        <Route path="/metodo" element={<PageTransition><Methodology /></PageTransition>} />
+        <Route path="/metodo/headhunting-analitico" element={<PageTransition><AnalyticalHeadhunting /></PageTransition>} />
+        <Route path="/aree-di-lavoro" element={<PageTransition><WorkAreas /></PageTransition>} />
+        <Route path="/insights" element={<PageTransition><Insights /></PageTransition>} />
+        <Route path="/insights/fattore-umano-ma" element={<PageTransition><HumanFactorMA /></PageTransition>} />
+        <Route path="/insights/transizione-management-pmi" element={<PageTransition><TransizioneManagementPmi /></PageTransition>} />
+        <Route path="/insights/shadow-ai-pmi" element={<PageTransition><ShadowAiPmi /></PageTransition>} />
+        <Route path="/insights/life-sciences-2026" element={<PageTransition><LifeSciences2026 /></PageTransition>} />
+        <Route path="/insights/paper-packaging-2026" element={<PageTransition><PaperPackaging2026 /></PageTransition>} />
+        <Route path="/contatti" element={<PageTransition><Contact /></PageTransition>} />
+      </Routes>
+    </AnimatePresence>
+  );
+}
+
 export default function App() {
   return (
     <Router>
       <ScrollToTop />
       <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/chi-sono" element={<About />} />
-          <Route path="/metodo" element={<Methodology />} />
-          <Route path="/metodo/headhunting-analitico" element={<AnalyticalHeadhunting />} />
-          <Route path="/aree-di-lavoro" element={<WorkAreas />} />
-          <Route path="/insights" element={<Insights />} />
-          <Route path="/insights/fattore-umano-ma" element={<HumanFactorMA />} />
-          <Route path="/insights/transizione-management-pmi" element={<TransizioneManagementPmi />} />
-          <Route path="/insights/shadow-ai-pmi" element={<ShadowAiPmi />} />
-          <Route path="/insights/life-sciences-2026" element={<LifeSciences2026 />} />
-          <Route path="/insights/paper-packaging-2026" element={<PaperPackaging2026 />} />
-          <Route path="/contatti" element={<Contact />} />
-        </Routes>
+        <AnimatedRoutes />
       </Layout>
     </Router>
   );
