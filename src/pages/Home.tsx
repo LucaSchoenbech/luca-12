@@ -238,7 +238,7 @@ export default function Home() {
       <section className="bg-ink text-paper py-48">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mb-32">
-            <h2 className="text-5xl md:text-6xl font-display font-light mb-12 italic">{t('home.pillars_title')}</h2>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-light mb-8 md:mb-12 italic leading-tight">{t('home.pillars_title')}</h2>
             <p className="text-gray-400 text-xl font-light leading-relaxed">
               {t('home.pillars_desc')}
             </p>

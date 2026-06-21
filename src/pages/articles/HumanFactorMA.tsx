@@ -1,13 +1,18 @@
 import { ArrowLeft, Clock, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import React from 'react';
+import ReadingProgress from '../../components/ReadingProgress';
 
 export default function HumanFactorMA() {
   const { t, i18n } = useTranslation();
   const isEn = i18n.language === 'en';
 
   return (
-    <div className="py-24 md:py-48 bg-paper">
+    <>
+      <ReadingProgress />
+      <div className="py-24 md:py-48 bg-paper">
+
       <div className="max-w-4xl mx-auto px-6">
         <Link 
           to="/insights"
@@ -249,5 +254,6 @@ export default function HumanFactorMA() {
         </div>
       </div>
     </div>
+    </>
   );
 }
