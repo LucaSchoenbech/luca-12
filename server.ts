@@ -15,7 +15,7 @@ async function startServer() {
   app.use(express.json());
 
   // API Route for chat
-  app.post("/api/chat", async (req, res) => {
+  app.post(["/api/chat", "/.netlify/functions/chat"], async (req, res) => {
     try {
       const apiKey = process.env.GEMINI_API_KEY || "AIzaSyDKDjjsv-dPiZf1TlP_AkL5Twmn1emeZKA";
       if (!apiKey) {
