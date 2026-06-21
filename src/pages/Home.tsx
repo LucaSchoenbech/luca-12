@@ -26,7 +26,7 @@ export default function Home() {
   const pillars = t('home.pillars', { returnObjects: true }) as Array<{ t: string, d: string }>;
 
   return (
-    <div className="space-y-32 overflow-hidden">
+    <div className="overflow-hidden">
       {/* Hero Section */}
       <section className="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -114,7 +114,7 @@ export default function Home() {
       </section>
 
       {/* Intro Hook */}
-      <section className="max-w-7xl mx-auto px-6">
+      <section className="max-w-7xl mx-auto px-6 py-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
           <div className="lg:col-span-7">
             <h2 
@@ -145,7 +145,7 @@ export default function Home() {
       </section>
 
       {/* Engagements Preview */}
-      <section className="max-w-7xl mx-auto px-6">
+      <section className="max-w-7xl mx-auto px-6 pb-32">
         <div className="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-8">
           <h2 className="text-[10px] uppercase tracking-[0.4em] font-bold text-accent">{t('home.engagements_title')}</h2>
           <Link to="/aree-di-lavoro" className="text-xs uppercase tracking-widest font-bold border-b border-ink pb-2 hover:text-accent hover:border-accent transition-colors">{t('home.engagements_explore')}</Link>
@@ -178,7 +178,7 @@ export default function Home() {
       </section>
 
       {/* Insights Preview */}
-      <section className="bg-paper py-32 mb-16">
+      <section className="bg-paper py-32">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-8">
             <div>
@@ -283,7 +283,7 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="bg-paper rounded py-12 px-8 lg:px-16 shadow-2xl relative overflow-hidden"
+                className="bg-ink border border-accent/20 rounded py-12 px-8 lg:px-16 shadow-2xl relative overflow-hidden text-paper"
               >
                 {/* Subtle paper grain / noise texture could go here if needed */}
                 <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')" }}></div>
@@ -292,9 +292,9 @@ export default function Home() {
                   {(t('home.report_bands', { returnObjects: true }) as Array<{ title: string, desc: string }>).map((band, idx) => (
                     <div 
                       key={idx} 
-                      className="border-t border-accent-soft pt-4 pb-6 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 group hover:border-accent transition-colors duration-300"
+                      className="border-t border-gray-800 pt-4 pb-6 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 group hover:border-accent transition-colors duration-300"
                     >
-                      <h4 className="font-display text-ink font-medium text-lg lg:text-xl tracking-wide group-hover:text-accent transition-colors">
+                      <h4 className="font-display text-paper font-medium text-lg lg:text-xl tracking-wide group-hover:text-accent transition-colors">
                         {band.title}
                       </h4>
                       <p className="font-sans text-gray-500 text-sm tracking-wide">
@@ -303,7 +303,7 @@ export default function Home() {
                     </div>
                   ))}
                   {/* Final border to close the stack */}
-                  <div className="border-t border-accent-soft"></div>
+                  <div className="border-t border-gray-800"></div>
                 </div>
               </motion.div>
             </div>

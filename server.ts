@@ -6,14 +6,23 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const ai = new GoogleGenAI({
-  apiKey: process.env.GEMINI_API_KEY,
-  httpOptions: {
-    headers: {
-      "User-Agent": "aistudio-build",
-    },
-  },
-});
+let aiClient: GoogleGenAI | null = null;
+function getAI() {
+  if (!aiClient) {
+    if (!process.env.GEMINI_API_KEY) {
+      throw new Error("API key is missing config (Secrets panel).");
+    }
+    aiClient = new GoogleGenAI({
+      apiKey: process.env.GEMINI_API_KEY,
+      httpOptions: {
+        headers: {
+          "User-Agent": "aistudio-build",
+        },
+      },
+    });
+  }
+  return aiClient;
+}
 
 async function startServer() {
   const app = express();
@@ -25,9 +34,10 @@ async function startServer() {
   app.post("/api/chat", async (req, res) => {
     try {
       if (!process.env.GEMINI_API_KEY) {
-        return res.status(401).json({ error: "API key is missing! Assicurati di aver configurato una API Key di Gemini nelle impostazioni del progetto (Secrets panel)." });
+        return res.status(401).json({ error: "API key mancante! Assicurati di aver configurato una API Key di Gemini nelle impostazioni del progetto (Secrets panel)." });
       }
 
+      const ai = getAI();
       const { history, message } = req.body;
       
       const chat = ai.chats.create({
