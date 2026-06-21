@@ -26,7 +26,7 @@ export default function Home() {
   const pillars = t('home.pillars', { returnObjects: true }) as Array<{ t: string, d: string }>;
 
   return (
-    <div className="space-y-32 mb-48 overflow-hidden">
+    <div className="space-y-32 overflow-hidden">
       {/* Hero Section */}
       <section className="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">

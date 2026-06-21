@@ -24,6 +24,10 @@ async function startServer() {
   // API Route for chat
   app.post("/api/chat", async (req, res) => {
     try {
+      if (!process.env.GEMINI_API_KEY) {
+        return res.status(401).json({ error: "API key is missing! Assicurati di aver configurato una API Key di Gemini nelle impostazioni del progetto (Secrets panel)." });
+      }
+
       const { history, message } = req.body;
       
       const chat = ai.chats.create({

@@ -51,7 +51,8 @@ export default function Chatbot() {
         setMessages(prev => [...prev, { role: 'model', parts: [{ text: data.text }] }]);
       } else {
         console.error('Chat error:', data.error);
-        setMessages(prev => [...prev, { role: 'model', parts: [{ text: i18n.language === 'en' ? 'Sorry, there was an error processing your request.' : 'Siamo spiacenti, si è verificato un errore.' }] }]);
+        const errorText = data.error || (i18n.language === 'en' ? 'Sorry, there was an error processing your request.' : 'Siamo spiacenti, si è verificato un errore.');
+        setMessages(prev => [...prev, { role: 'model', parts: [{ text: `⚠️ ${errorText}` }] }]);
       }
     } catch (error) {
       console.error('Fetch error:', error);
@@ -81,7 +82,7 @@ export default function Chatbot() {
             <div className="bg-ink text-paper p-4 flex justify-between items-center">
               <div className="flex items-center space-x-2">
                 <MessageSquare size={20} className="text-accent" />
-                <span className="font-display font-medium tracking-wide">Schoenbech AI</span>
+                <span className="font-display font-medium tracking-wide">Executive Assistant</span>
               </div>
               <button 
                 onClick={() => setIsOpen(false)}
