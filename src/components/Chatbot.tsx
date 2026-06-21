@@ -46,17 +46,24 @@ export default function Chatbot() {
         })
       });
 
-      const data = await response.json();
-      if (response.ok) {
-        setMessages(prev => [...prev, { role: 'model', parts: [{ text: data.text }] }]);
+      const contentType = response.headers.get("content-type");
+      if (contentType && contentType.indexOf("application/json") !== -1) {
+        const data = await response.json();
+        if (response.ok) {
+          setMessages(prev => [...prev, { role: 'model', parts: [{ text: data.text }] }]);
+        } else {
+          console.error('Chat error:', data.error);
+          const errorText = data.error || (i18n.language === 'en' ? 'Server error.' : 'Errore del server.');
+          setMessages(prev => [...prev, { role: 'model', parts: [{ text: `⚠️ ${errorText}` }] }]);
+        }
       } else {
-        console.error('Chat error:', data.error);
-        const errorText = data.error || (i18n.language === 'en' ? 'Sorry, there was an error processing your request.' : 'Siamo spiacenti, si è verificato un errore.');
-        setMessages(prev => [...prev, { role: 'model', parts: [{ text: `⚠️ ${errorText}` }] }]);
+        const text = await response.text();
+        console.error('Expected JSON, got text:', text.substring(0, 100));
+        setMessages(prev => [...prev, { role: 'model', parts: [{ text: i18n.language === 'en' ? 'Connection routing error. Try refreshing.' : "Errore di routing di rete. Assicurati di usare l'ultima versione condivisa." }] }]);
       }
     } catch (error) {
       console.error('Fetch error:', error);
-      setMessages(prev => [...prev, { role: 'model', parts: [{ text: i18n.language === 'en' ? 'Connection error.' : 'Errore di connessione.' }] }]);
+      setMessages(prev => [...prev, { role: 'model', parts: [{ text: i18n.language === 'en' ? 'Network error. Check connection.' : 'Errore di rete. Controlla la connessione.' }] }]);
     } finally {
       setIsLoading(false);
     }

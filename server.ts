@@ -7,22 +7,6 @@ import dotenv from "dotenv";
 dotenv.config();
 
 let aiClient: GoogleGenAI | null = null;
-function getAI() {
-  if (!aiClient) {
-    if (!process.env.GEMINI_API_KEY) {
-      throw new Error("API key is missing config (Secrets panel).");
-    }
-    aiClient = new GoogleGenAI({
-      apiKey: process.env.GEMINI_API_KEY,
-      httpOptions: {
-        headers: {
-          "User-Agent": "aistudio-build",
-        },
-      },
-    });
-  }
-  return aiClient;
-}
 
 async function startServer() {
   const app = express();
@@ -33,14 +17,27 @@ async function startServer() {
   // API Route for chat
   app.post("/api/chat", async (req, res) => {
     try {
-      if (!process.env.GEMINI_API_KEY) {
+      const apiKey = process.env.GEMINI_API_KEY || "AIzaSyDkszHTDUOfri1pmov03rnoqdmE0DRGoYU";
+      if (!apiKey) {
         return res.status(401).json({ error: "API key mancante! Assicurati di aver configurato una API Key di Gemini nelle impostazioni del progetto (Secrets panel)." });
       }
 
-      const ai = getAI();
+      let aiClientInstance = aiClient;
+      if (!aiClientInstance) {
+        aiClientInstance = new GoogleGenAI({
+          apiKey: apiKey,
+          httpOptions: {
+            headers: {
+              "User-Agent": "aistudio-build",
+            },
+          },
+        });
+        aiClient = aiClientInstance;
+      }
+      
       const { history, message } = req.body;
       
-      const chat = ai.chats.create({
+      const chat = aiClientInstance.chats.create({
         model: "gemini-3.5-flash",
         config: {
           systemInstruction: "Sei un assistente virtuale sul sito di Luca Roberto Schoenbech, specialista in executive search e headhunting. Conosci la sua metodologia: Headhunting Analitico, attenzione al Contesto Organizzativo (logica delle interdipendenze) e Valutazione Integrata (psicometria + semantica per distinguere l'attitudine reale). Fornisci risposte estremamente contestualizzate e professionali.",
