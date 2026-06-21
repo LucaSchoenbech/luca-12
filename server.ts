@@ -38,7 +38,7 @@ async function startServer() {
       const { history, message } = req.body;
       
       const chat = aiClientInstance.chats.create({
-        model: "gemini-3.5-flash",
+        model: "gemini-2.5-flash",
         config: {
           systemInstruction: "Sei un assistente virtuale sul sito di Luca Roberto Schoenbech, specialista in executive search e headhunting. Conosci la sua metodologia: Headhunting Analitico, attenzione al Contesto Organizzativo (logica delle interdipendenze) e Valutazione Integrata (psicometria + semantica per distinguere l'attitudine reale). Fornisci risposte estremamente contestualizzate e professionali.",
         },
