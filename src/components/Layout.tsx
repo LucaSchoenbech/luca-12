@@ -5,6 +5,7 @@ import { Menu, X, Linkedin, Mail, Globe } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Logo } from './Logo';
+import Chatbot from './Chatbot';
 
 interface LayoutProps {
   children: ReactNode;
@@ -145,6 +146,7 @@ export default function Layout({ children }: LayoutProps) {
           </div>
         </div>
       </footer>
+      <Chatbot />
     </div>
   );
 }
