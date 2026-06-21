@@ -59,7 +59,7 @@ export default function Chatbot() {
       } else {
         const text = await response.text();
         console.error('Expected JSON, got text:', text.substring(0, 100));
-        setMessages(prev => [...prev, { role: 'model', parts: [{ text: i18n.language === 'en' ? 'Connection routing error. Try refreshing.' : "Errore di routing di rete. Assicurati di usare l'ultima versione condivisa." }] }]);
+        setMessages(prev => [...prev, { role: 'model', parts: [{ text: i18n.language === 'en' ? '⚠️ Application routing error.' : '⚠️ Errore di routing del server. Assicurati che le Netlify Functions siano attive.' }] }]);
       }
     } catch (error) {
       console.error('Fetch error:', error);

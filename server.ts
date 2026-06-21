@@ -42,15 +42,22 @@ async function startServer() {
         config: {
           systemInstruction: "Sei un assistente virtuale sul sito di Luca Roberto Schoenbech, specialista in executive search e headhunting. Conosci la sua metodologia: Headhunting Analitico, attenzione al Contesto Organizzativo (logica delle interdipendenze) e Valutazione Integrata (psicometria + semantica per distinguere l'attitudine reale). Fornisci risposte estremamente contestualizzate e professionali.",
         },
-        history: history
+        history: history || []
       });
 
       const response = await chat.sendMessage({ message });
+      res.setHeader('Content-Type', 'application/json');
       res.json({ text: response.text });
     } catch (error: any) {
       console.error(error);
+      res.setHeader('Content-Type', 'application/json');
       res.status(500).json({ error: error.message || "Something went wrong" });
     }
+  });
+
+  // Handle fallback or generic errors mapping to JSON if starting with /api
+  app.use("/api", (req, res) => {
+      res.status(404).json({ error: "API Route not found" });
   });
 
   // Vite middleware for development
