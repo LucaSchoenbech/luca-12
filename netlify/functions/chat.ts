@@ -9,19 +9,17 @@ export const handler: Handler = async (event, context) => {
   }
 
   try {
-    const apiKey = process.env.GEMINI_API_KEY;
-    if (!apiKey) {
+    if (!process.env.GEMINI_API_KEY) {
       return {
         statusCode: 401,
         body: JSON.stringify({ error: "API key mancante o non valida." })
       };
     }
 
+    // Zero-config: l'SDK auto-rileva GEMINI_API_KEY e GOOGLE_GEMINI_BASE_URL
+    // iniettati da Netlify AI Gateway, instradando le richieste tramite il gateway.
     if (!aiClient) {
-      aiClient = new GoogleGenAI({ 
-        apiKey: apiKey,
-        httpOptions: { headers: { "User-Agent": "aistudio-build" } }
-      });
+      aiClient = new GoogleGenAI({});
     }
 
     const body = JSON.parse(event.body || '{}');

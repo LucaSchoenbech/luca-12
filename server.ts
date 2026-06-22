@@ -23,10 +23,7 @@ async function startServer() {
       }
 
       if (!aiClient) {
-        aiClient = new GoogleGenAI({
-          apiKey: apiKey,
-          httpOptions: { headers: { "User-Agent": "aistudio-build" } },
-        });
+        aiClient = new GoogleGenAI({});
       }
       
       const { history, message } = req.body;
