@@ -51,7 +51,7 @@ export default function Chatbot() {
       setMessages(prev => [...prev, { role: "model", text: data.text }]);
     } catch (error: any) {
       console.error(error);
-      setMessages(prev => [...prev, { role: "model", text: "Scusa, si è verificato un errore." }]);
+      setMessages(prev => [...prev, { role: "model", text: "Scusa, si è verificato un errore: " + error.message }]);
     } finally {
       setIsLoading(false);
     }

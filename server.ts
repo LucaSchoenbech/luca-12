@@ -60,8 +60,8 @@ REGOLE:
       res.setHeader('Content-Type', 'application/json');
       res.json({ text: response.text });
     } catch (error: any) {
-      console.error(error);
-      res.status(500).json({ error: error.message || "Something went wrong" });
+      console.error("Local Chat API Error:", error);
+      res.status(500).json({ error: error.message || "Qualcosa è andato storto nel server." });
     }
   });
 

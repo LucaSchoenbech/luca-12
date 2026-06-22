@@ -60,10 +60,11 @@ REGOLE:
       body: JSON.stringify({ text: response.text })
     };
   } catch (error: any) {
-    console.error(error);
+    console.error("Chat API Error:", error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: error.message || "Something went wrong" })
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ error: error.message || "Qualcosa è andato storto nel server." })
     };
   }
 };
