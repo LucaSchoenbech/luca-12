@@ -21,7 +21,7 @@ function createClient(): GoogleGenAI {
   // altrimenti derivalo dalla base sempre presente del gateway.
   const geminiBaseUrl =
     process.env.GOOGLE_GEMINI_BASE_URL ||
-    (gatewayBase ? `${gatewayBase.replace(/\/+$/, '')}/gemini` : undefined);
+    (gatewayBase ? `${gatewayBase.replace(/\/\/+$/, '')}/gemini` : undefined);
 
   if (gatewayKey && geminiBaseUrl) {
     return new GoogleGenAI({
