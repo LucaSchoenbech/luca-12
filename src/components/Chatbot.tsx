@@ -42,7 +42,14 @@ export default function Chatbot() {
         }),
       });
 
-      const data = await response.json();
+      const textResponse = await response.text();
+      let data;
+      try {
+        data = JSON.parse(textResponse);
+      } catch (parseError) {
+        console.error("Non-JSON response received:", textResponse.substring(0, 200));
+        throw new Error(`Il server ha risposto con un formato non valido. (Status: ${response.status}). Assicurati che le Netlify Functions siano state deployate correttamente.`);
+      }
 
       if (!response.ok) {
         throw new Error(data.error || "Errore nella comunicazione");
