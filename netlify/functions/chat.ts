@@ -3,14 +3,46 @@ import { GoogleGenAI } from '@google/genai';
 
 let aiClient: GoogleGenAI | null = null;
 
+/**
+ * Costruisce il client Gemini instradando SEMPRE le richieste tramite il
+ * Netlify AI Gateway, usando le credenziali gestite da Netlify
+ * (NETLIFY_AI_GATEWAY_KEY / NETLIFY_AI_GATEWAY_BASE_URL) che sono sempre
+ * presenti nel runtime.
+ *
+ * Questo evita il problema in cui una GEMINI_API_KEY impostata manualmente sul
+ * sito (non valida o scaduta) farebbe inviare le richieste direttamente a
+ * Google, causando l'errore ricorrente "API key not valid".
+ */
+function createClient(): GoogleGenAI {
+  const gatewayKey = process.env.NETLIFY_AI_GATEWAY_KEY;
+  const gatewayBase = process.env.NETLIFY_AI_GATEWAY_BASE_URL;
+
+  // Endpoint Gemini del gateway: usa quello iniettato da Netlify se disponibile,
+  // altrimenti derivalo dalla base sempre presente del gateway.
+  const geminiBaseUrl =
+    process.env.GOOGLE_GEMINI_BASE_URL ||
+    (gatewayBase ? `${gatewayBase.replace(/\/+$/, '')}/gemini` : undefined);
+
+  if (gatewayKey && geminiBaseUrl) {
+    return new GoogleGenAI({
+      apiKey: gatewayKey,
+      httpOptions: { baseUrl: geminiBaseUrl },
+    });
+  }
+
+  // Fallback (es. sviluppo locale senza gateway): configurazione automatica.
+  return new GoogleGenAI({});
+}
+
 export const handler: Handler = async (event, context) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
   try {
-    const apiKey = process.env.GEMINI_API_KEY;
-    if (!apiKey) {
+    // Il gateway fornisce sempre NETLIFY_AI_GATEWAY_KEY nel runtime. In assenza
+    // sia di questa che di una GEMINI_API_KEY, non è possibile autenticarsi.
+    if (!process.env.NETLIFY_AI_GATEWAY_KEY && !process.env.GEMINI_API_KEY) {
       return {
         statusCode: 401,
         body: JSON.stringify({ error: "API key mancante o non valida." })
@@ -18,10 +50,7 @@ export const handler: Handler = async (event, context) => {
     }
 
     if (!aiClient) {
-      aiClient = new GoogleGenAI({ 
-        apiKey: apiKey,
-        httpOptions: { headers: { "User-Agent": "aistudio-build" } }
-      });
+      aiClient = createClient();
     }
 
     const body = JSON.parse(event.body || '{}');

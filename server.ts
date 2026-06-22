@@ -8,6 +8,29 @@ dotenv.config();
 
 let aiClient: GoogleGenAI | null = null;
 
+/**
+ * Costruisce il client Gemini instradando le richieste tramite il Netlify AI
+ * Gateway quando le credenziali gestite sono disponibili, evitando di usare una
+ * GEMINI_API_KEY manuale non valida.
+ */
+function createClient(): GoogleGenAI {
+  const gatewayKey = process.env.NETLIFY_AI_GATEWAY_KEY;
+  const gatewayBase = process.env.NETLIFY_AI_GATEWAY_BASE_URL;
+
+  const geminiBaseUrl =
+    process.env.GOOGLE_GEMINI_BASE_URL ||
+    (gatewayBase ? `${gatewayBase.replace(/\/+$/, '')}/gemini` : undefined);
+
+  if (gatewayKey && geminiBaseUrl) {
+    return new GoogleGenAI({
+      apiKey: gatewayKey,
+      httpOptions: { baseUrl: geminiBaseUrl },
+    });
+  }
+
+  return new GoogleGenAI({});
+}
+
 async function startServer() {
   const app = express();
   const PORT = 3000;
@@ -17,16 +40,12 @@ async function startServer() {
   // API Route for chat
   app.post(["/api/chat", "/.netlify/functions/chat"], async (req, res) => {
     try {
-      const apiKey = process.env.GEMINI_API_KEY;
-      if (!apiKey) {
+      if (!process.env.NETLIFY_AI_GATEWAY_KEY && !process.env.GEMINI_API_KEY) {
         return res.status(401).json({ error: "API key mancante o non valida! Inserisci una nuova Gemini API Key valida." });
       }
 
       if (!aiClient) {
-        aiClient = new GoogleGenAI({
-          apiKey: apiKey,
-          httpOptions: { headers: { "User-Agent": "aistudio-build" } },
-        });
+        aiClient = createClient();
       }
       
       const { history, message } = req.body;
