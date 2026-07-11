@@ -268,7 +268,8 @@ const resources = {
             "title": "Analisi semantica della motivazione nei colloqui manageriali",
             "excerpt": "Cosa rivela il linguaggio del candidato che il curriculum non racconta.",
             "tag": "Methodology",
-            "date": "In programma"
+            "date": "Luglio 2026",
+            "slug": "/insights/analisi-semantica"
           },
           {
             "title": "La transizione del management storico nelle PMI italiane",
@@ -565,7 +566,8 @@ const resources = {
             "title": "Semantic analysis of motivation in executive interviews",
             "excerpt": "What the candidate's language reveals that the resume doesn't tell.",
             "tag": "Methodology",
-            "date": "Upcoming"
+            "date": "July 2026",
+            "slug": "/insights/analisi-semantica"
           },
           {
             "title": "The transition of historical management in Italian SMEs",
