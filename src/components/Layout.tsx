@@ -106,10 +106,10 @@ export default function Layout({ children }: LayoutProps) {
       <footer className="bg-ink text-paper py-32">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-20">
           <div className="md:col-span-2 space-y-8">
-            <div className="flex items-center space-x-3 text-paper">
-              <Logo iconOnly={true} className="text-paper w-8 h-8 opacity-50" />
+            <Link to="/" className="inline-flex items-center space-x-3 text-paper group">
+              <Logo iconOnly={true} className="text-paper w-8 h-8 opacity-50 group-hover:opacity-100 transition-opacity duration-500" coloredOnHover={true} />
               <Logo textOnly={true} className="!text-paper" />
-            </div>
+            </Link>
             <p className="text-gray-400 text-base max-w-sm leading-relaxed font-light">
               {i18n.language === 'it' 
                 ? "Ricerca, selezione e valutazione di figure senior professional, manageriali e direttive." 
