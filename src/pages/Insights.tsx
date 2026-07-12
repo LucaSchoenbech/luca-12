@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export default function Insights() {
   const { t } = useTranslation();
   
-  const articles = t('insights.articles', { returnObjects: true }) as Array<{ title: string, excerpt: string, tag: string, date: string, slug?: string }>;
+  const articles = t('insights.articles', { returnObjects: true }) as Array<{ title: string, excerpt: string, tag: string, date: string, slug?: string, image?: string }>;
 
   return (
     <div className="py-24 md:py-48">
@@ -45,20 +45,21 @@ export default function Insights() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="grid grid-cols-1 lg:grid-cols-12 gap-12 group cursor-pointer border-t border-accent-soft pt-16 hover:bg-accent-soft/30 transition-colors px-4 -mx-4 pb-16"
+                className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 group cursor-pointer border-t border-accent-soft pt-16 hover:bg-accent-soft/30 transition-colors px-4 -mx-4 pb-16"
               >
-                <div className="lg:col-span-3 space-y-4">
+                <div className="lg:col-span-2 space-y-4">
                   <span className="text-[9px] uppercase tracking-[0.4em] font-bold text-accent">#{article.tag}</span>
                   <div className="flex items-center space-x-2 text-[10px] uppercase tracking-widest font-mono text-gray-400">
                     <Clock size={12} />
                     <span>{article.date}</span>
                   </div>
                 </div>
-                <ArticleWrapper {...wrapperProps} className="lg:col-span-9 space-y-6 block">
-                  <h2 className="text-4xl md:text-5xl font-display font-medium group-hover:italic transition-all duration-300 leading-tight">
+                
+                <ArticleWrapper {...wrapperProps} className="lg:col-span-6 space-y-6 block">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-medium group-hover:italic transition-all duration-300 leading-tight">
                     {article.title}
                   </h2>
-                  <div className="max-w-2xl">
+                  <div className="max-w-xl">
                     <p className="text-lg text-gray-500 font-light leading-relaxed">
                       {article.excerpt}
                     </p>
@@ -69,6 +70,19 @@ export default function Insights() {
                     </span>
                   </div>
                 </ArticleWrapper>
+
+                {article.image && (
+                  <ArticleWrapper {...wrapperProps} className="lg:col-span-4 block mt-8 lg:mt-0">
+                    <div className="w-full aspect-[4/3] overflow-hidden relative bg-accent-soft">
+                      <img 
+                        src={article.image} 
+                        alt={article.title}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover grayscale mix-blend-multiply transition-transform duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                      />
+                    </div>
+                  </ArticleWrapper>
+                )}
               </motion.article>
             );
           })}

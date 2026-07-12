@@ -209,6 +209,16 @@ export default function Home() {
                 className="group cursor-pointer flex flex-col h-full"
               >
                 <Link to={article.slug} className="flex-grow flex flex-col">
+                  {article.image && (
+                    <div className="w-full aspect-[16/9] mb-8 overflow-hidden relative bg-accent-soft">
+                      <img 
+                        src={article.image} 
+                        alt={article.title}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover grayscale mix-blend-multiply opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700"
+                      />
+                    </div>
+                  )}
                   <div className="mb-6 flex items-center justify-between">
                     <span className="text-[10px] uppercase tracking-[0.3em] font-mono text-accent">
                       {article.tag}

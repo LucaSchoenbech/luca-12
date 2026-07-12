@@ -235,48 +235,56 @@ const resources = {
             "excerpt": "Il problema che nessuno vuole nominare in due diligence, dove si annida il paradosso più costoso del mid-market italiano.",
             "tag": "Talent Sourcing Advisory",
             "date": "14 Maggio 2026",
-            "slug": "/insights/fattore-umano-ma"
+            "slug": "/insights/fattore-umano-ma",
+            "image": "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800"
           },
           {
             "title": "Paper & Packaging 2026: leggere la trasformazione del settore attraverso la lente del capitale umano",
             "excerpt": "Se la carta grafica perde terreno, il packaging affronta una crescita con vincoli normativi crescenti e competenze sempre più rare: priorità HR e organizzative.",
             "tag": "Paper & Packaging",
             "date": "Maggio 2026",
-            "slug": "/insights/paper-packaging-2026"
+            "slug": "/insights/paper-packaging-2026",
+            "image": "https://images.unsplash.com/photo-1606836591695-4d58a73eba1e?auto=format&fit=crop&q=80&w=800"
           },
           {
             "title": "2026: L'Anno della Convergenza",
             "excerpt": "Dall'AI Agentica al nuovo CCNL: la trasformazione del capitale umano nel Life Sciences italiano.",
             "tag": "Life Sciences",
             "date": "Maggio 2026",
-            "slug": "/insights/life-sciences-2026"
+            "slug": "/insights/life-sciences-2026",
+            "image": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=800"
           },
           {
             "title": "Shadow AI nelle PMI: il rischio invisibile nascosto nei vostri uffici",
             "excerpt": "Come un fenomeno sommerso sta mettendo a rischio dati, compliance e vantaggio competitivo delle piccole e medie imprese lombarde.",
             "tag": "Technology",
             "date": "Maggio 2026",
-            "slug": "/insights/shadow-ai-pmi"
+            "slug": "/insights/shadow-ai-pmi",
+            "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
           },
           {
             "title": "AI Literacy come dimensione di valutazione manageriale",
             "excerpt": "In un mercato in cui la governance dell'IA è materia di CDA, cosa cercare nei candidati di responsabilità.",
             "tag": "Technology",
-            "date": "In programma"
+            "date": "Luglio 2026",
+            "slug": "/insights/ai-literacy",
+            "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800"
           },
           {
             "title": "Analisi semantica della motivazione nei colloqui manageriali",
             "excerpt": "Cosa rivela il linguaggio del candidato che il curriculum non racconta.",
             "tag": "Methodology",
             "date": "Luglio 2026",
-            "slug": "/insights/analisi-semantica"
+            "slug": "/insights/analisi-semantica",
+            "image": "https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?auto=format&fit=crop&q=80&w=800"
           },
           {
             "title": "La transizione del management storico nelle PMI italiane",
             "excerpt": "Quando il fondatore decide che è arrivato il momento di managerializzare: pattern e condizioni di successo.",
             "tag": "PMI",
             "date": "Maggio 2026",
-            "slug": "/insights/transizione-management-pmi"
+            "slug": "/insights/transizione-management-pmi",
+            "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=800"
           }
         ]
       },
@@ -533,48 +541,56 @@ const resources = {
             "excerpt": "The problem no one wants to mention in due diligence, where the most expensive paradox of the Italian mid-market hides.",
             "tag": "Talent Sourcing Advisory",
             "date": "May 14th, 2026",
-            "slug": "/insights/fattore-umano-ma"
+            "slug": "/insights/fattore-umano-ma",
+            "image": "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800"
           },
           {
             "title": "Paper & Packaging 2026: reading sector transformation through the human capital lens",
             "excerpt": "As graphic paper loses ground, packaging expands with growing compliance constraints and scarce technical skills: HR and organizational priorities.",
             "tag": "Paper & Packaging",
             "date": "May 2026",
-            "slug": "/insights/paper-packaging-2026"
+            "slug": "/insights/paper-packaging-2026",
+            "image": "https://images.unsplash.com/photo-1606836591695-4d58a73eba1e?auto=format&fit=crop&q=80&w=800"
           },
           {
             "title": "2026: The Year of Convergence",
             "excerpt": "From Agentic AI to the new national collective agreement: the transformation of human capital in Italian Life Sciences.",
             "tag": "Life Sciences",
             "date": "May 2026",
-            "slug": "/insights/life-sciences-2026"
+            "slug": "/insights/life-sciences-2026",
+            "image": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=800"
           },
           {
             "title": "Shadow AI in SMEs: the invisible risk hidden in your offices",
             "excerpt": "How a submerged phenomenon is putting data, compliance, and competitive advantage of SMEs at risk.",
             "tag": "Technology",
             "date": "May 2026",
-            "slug": "/insights/shadow-ai-pmi"
+            "slug": "/insights/shadow-ai-pmi",
+            "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
           },
           {
             "title": "AI Literacy as a managerial assessment dimension",
             "excerpt": "In a market where AI governance is a board matter, what to look for in leadership candidates.",
             "tag": "Technology",
-            "date": "Upcoming"
+            "date": "July 2026",
+            "slug": "/insights/ai-literacy",
+            "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800"
           },
           {
             "title": "Semantic analysis of motivation in executive interviews",
             "excerpt": "What the candidate's language reveals that the resume doesn't tell.",
             "tag": "Methodology",
             "date": "July 2026",
-            "slug": "/insights/analisi-semantica"
+            "slug": "/insights/analisi-semantica",
+            "image": "https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?auto=format&fit=crop&q=80&w=800"
           },
           {
             "title": "The transition of historical management in Italian SMEs",
             "excerpt": "When the founder decides it's time to managerialize: patterns and conditions for success.",
             "tag": "SME",
             "date": "May 2026",
-            "slug": "/insights/transizione-management-pmi"
+            "slug": "/insights/transizione-management-pmi",
+            "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=800"
           }
         ]
       },

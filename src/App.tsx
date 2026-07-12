@@ -15,6 +15,7 @@ import PaperPackaging2026 from './pages/articles/PaperPackaging2026';
 import AnalyticalHeadhunting from './pages/articles/AnalyticalHeadhunting';
 import HumanFactorMA from './pages/articles/HumanFactorMA';
 import AnalisiSemantica from './pages/articles/AnalisiSemantica';
+import AiLiteracy from './pages/articles/AiLiteracy';
 import Contact from './pages/Contact';
 
 function ScrollToTop() {
@@ -52,6 +53,7 @@ function AnimatedRoutes() {
         <Route path="/insights" element={<PageTransition><Insights /></PageTransition>} />
         <Route path="/insights/fattore-umano-ma" element={<PageTransition><HumanFactorMA /></PageTransition>} />
         <Route path="/insights/analisi-semantica" element={<PageTransition><AnalisiSemantica /></PageTransition>} />
+        <Route path="/insights/ai-literacy" element={<PageTransition><AiLiteracy /></PageTransition>} />
         <Route path="/insights/transizione-management-pmi" element={<PageTransition><TransizioneManagementPmi /></PageTransition>} />
         <Route path="/insights/shadow-ai-pmi" element={<PageTransition><ShadowAiPmi /></PageTransition>} />
         <Route path="/insights/life-sciences-2026" element={<PageTransition><LifeSciences2026 /></PageTransition>} />
