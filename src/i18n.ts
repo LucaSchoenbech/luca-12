@@ -214,7 +214,7 @@ const resources = {
             "id": "03",
             "title": "Valutazione Integrata",
             "subtitle": "Psicometria e Analisi Semantica",
-            "content": "Integro strumenti psicometrici scientificamente validati (HEXACO, leadership styles) con l'analisi semantica del linguaggio della motivazione. La struttura motivazionale emerge dal come si racconta la carriera: pattern semantici che distinguono l'attitudine reale dal profilo dichiarato sul CV."
+            "content": "Integro strumenti psicometrici scientificamente validati (modelli dimensionali e stili di leadership) con l'analisi semantica del linguaggio della motivazione. La struttura motivazionale emerge dal come si racconta la carriera: pattern semantici che distinguono l'attitudine reale dal profilo dichiarato sul CV."
           }
         ],
         "cont_title": "Continuità nell'inserimento",
@@ -520,7 +520,7 @@ const resources = {
             "id": "03",
             "title": "Integrated Assessment",
             "subtitle": "Psychometrics and Semantic Analysis",
-            "content": "I integrate scientifically validated psychometric tools (HEXACO, leadership styles) with semantic analysis of motivational language. The motivational structure emerges from how one recounts their career: semantic patterns that distinguish true aptitude from the profile claimed on the resume."
+            "content": "I integrate scientifically validated psychometric tools (dimensional models and leadership styles) with semantic analysis of motivational language. The motivational structure emerges from how one recounts their career: semantic patterns that distinguish true aptitude from the profile claimed on the resume."
           }
         ],
         "cont_title": "Onboarding Continuity",
@@ -532,7 +532,7 @@ const resources = {
       "insights": {
         "subtitle": "Thought and Method",
         "title": "Insights & <br /><span className=\"italic text-accent\">Perspectives.</span>",
-        "desc": "Reflections on leadership dynamics and transformations in contemporary executive search processes.",
+        "desc": "Reflections on leadership dynamics and transformations in contemporary search processes for senior roles.",
         "read_abstract": "Read abstract",
         "read_article": "Read full article",
         "articles": [

@@ -38,7 +38,7 @@ export default function AnalyticalHeadhunting() {
             )}
           </h1>
           <p className="text-xl md:text-2xl text-gray-500 font-light leading-relaxed">
-            {isEn ? 'Every executive search project is born from a structured reading of the ecosystem in which the sought figure operates. Before opening the search, we build a strategic map of the reference market — a working tool shared with the client, not an internal exercise in our methodology.' : 'Ogni progetto di executive search nasce da una lettura strutturata dell\'ecosistema in cui opera la figura ricercata. Prima di aprire la ricerca, costruiamo una mappa strategica del mercato di riferimento — uno strumento di lavoro condiviso con il cliente, non un esercizio interno alla nostra metodologia.'}
+            {isEn ? 'Every search project for senior professionals is born from a structured reading of the ecosystem in which the sought figure operates. Before opening the search, we build a strategic map of the reference market — a working tool shared with the client, not an internal exercise in our methodology.' : 'Ogni progetto di ricerca di profili senior nasce da una lettura strutturata dell\'ecosistema in cui opera la figura ricercata. Prima di aprire la ricerca, costruiamo una mappa strategica del mercato di riferimento — uno strumento di lavoro condiviso con il cliente, non un esercizio interno alla nostra metodologia.'}
           </p>
         </header>
 
