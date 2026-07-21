@@ -22,9 +22,9 @@ const resources = {
         "title": "Informativa sul trattamento dei dati personali",
         "last_updated": "Ultimo aggiornamento: 21 luglio 2026",
         "controller_title": "Titolare del trattamento",
-        "controller_desc": "Luca Roberto Schoenbech, titolare dell'omonima attività professionale (Schoenbech), P.IVA 10706990966 — luca@schoenbech.com",
+        "controller_desc": "Luca Roberto Schoenbech, titolare dell'omonima attività professionale (Schoenbech), P.IVA 10706990966 — <a href='mailto:luca@schoenbech.com' class='text-accent hover:underline'>luca@schoenbech.com</a>",
         "data_title": "Quali dati trattiamo",
-        "data_desc": "Dati di contatto professionali: nome, ruolo, azienda, indirizzo email e recapito telefonico aziendale.",
+        "data_desc": "Dati di contatto professionali: nome, ruolo, azienda, indirizzo email e recapito telefonico aziendale.<br/><br/><strong class='font-medium text-ink'>Dati raccolti tramite Assistente Virtuale (Chatbot):</strong> Le conversazioni intrattenute con l'assistente virtuale vengono salvate in un database cloud protetto al fine di analizzare l'efficacia dello strumento e migliorarne le risposte. Sebbene il sistema non richieda proattivamente dati personali, le informazioni inserite volontariamente nella chat saranno trattate con la medesima riservatezza. Si raccomanda di non inserire dati sensibili.",
         "source_title": "Da dove provengono i dati",
         "source_desc": "Da banche dati B2B di fornitori specializzati e da fonti pubbliche, quali profili professionali online e siti aziendali.",
         "purpose_title": "Perché li trattiamo e con quale base giuridica",
@@ -34,7 +34,7 @@ const resources = {
         "retention_title": "Per quanto tempo li conserviamo",
         "retention_desc": "I dati sono conservati per il tempo necessario alle finalità indicate. In caso di richiesta di rimozione, il contatto viene inserito in un elenco di esclusione al solo scopo di non essere ricontattato.",
         "rights_title": "I suoi diritti",
-        "rights_desc": "Lei può in qualsiasi momento accedere ai suoi dati, chiederne la rettifica o la cancellazione e opporsi al trattamento, scrivendo a luca@schoenbech.com. Ha inoltre diritto di proporre reclamo al Garante per la protezione dei dati personali (www.garanteprivacy.it)."
+        "rights_desc": "Lei può in qualsiasi momento accedere ai suoi dati, chiederne la rettifica o la cancellazione e opporsi al trattamento, scrivendo a <a href='mailto:luca@schoenbech.com' class='text-accent hover:underline'>luca@schoenbech.com</a>. Ha inoltre diritto di proporre reclamo al Garante per la protezione dei dati personali (<a href='https://www.garanteprivacy.it' target='_blank' rel='noopener noreferrer' class='text-accent hover:underline'>www.garanteprivacy.it</a>)."
       },
       "home": {
         "hero_subtitle": "Talent Sourcing Advisory",
@@ -347,9 +347,9 @@ const resources = {
         "title": "Personal Data Processing Policy",
         "last_updated": "Last updated: July 21, 2026",
         "controller_title": "Data Controller",
-        "controller_desc": "Luca Roberto Schoenbech, owner of the professional practice of the same name (Schoenbech), VAT 10706990966 — luca@schoenbech.com",
+        "controller_desc": "Luca Roberto Schoenbech, owner of the professional practice of the same name (Schoenbech), VAT 10706990966 — <a href='mailto:luca@schoenbech.com' class='text-accent hover:underline'>luca@schoenbech.com</a>",
         "data_title": "What data we process",
-        "data_desc": "Professional contact data: name, role, company, email address, and corporate phone number.",
+        "data_desc": "Professional contact data: name, role, company, email address, and corporate phone number.<br/><br/><strong class='font-medium text-ink'>Data collected via Virtual Assistant (Chatbot):</strong> Conversations with the virtual assistant are saved in a secure cloud database to analyze the effectiveness of the tool and improve its responses. Although the system does not proactively request personal data, any information voluntarily entered in the chat will be treated with the same confidentiality. It is recommended not to enter sensitive data.",
         "source_title": "Where the data comes from",
         "source_desc": "From B2B databases of specialized providers and public sources, such as online professional profiles and company websites.",
         "purpose_title": "Why we process it and legal basis",
@@ -359,7 +359,7 @@ const resources = {
         "retention_title": "How long we keep it",
         "retention_desc": "The data is stored for the time necessary for the stated purposes. In the event of a removal request, the contact is placed on an exclusion list solely to ensure they are not contacted again.",
         "rights_title": "Your rights",
-        "rights_desc": "You may access your data, request its rectification or erasure, and object to its processing at any time by writing to luca@schoenbech.com. You also have the right to lodge a complaint with the Data Protection Authority (www.garanteprivacy.it)."
+        "rights_desc": "You may access your data, request its rectification or erasure, and object to its processing at any time by writing to <a href='mailto:luca@schoenbech.com' class='text-accent hover:underline'>luca@schoenbech.com</a>. You also have the right to lodge a complaint with the Data Protection Authority (<a href='https://www.garanteprivacy.it' target='_blank' rel='noopener noreferrer' class='text-accent hover:underline'>www.garanteprivacy.it</a>)."
       },
       "home": {
         "hero_subtitle": "Talent Sourcing Advisory",

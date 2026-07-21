@@ -1,6 +1,6 @@
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
-import React from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import Layout from './components/Layout';
 import Home from './pages/Home';
@@ -18,6 +18,7 @@ import AnalisiSemantica from './pages/articles/AnalisiSemantica';
 import AiLiteracy from './pages/articles/AiLiteracy';
 import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
+import ChatHistory from './pages/ChatHistory';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -61,6 +62,7 @@ function AnimatedRoutes() {
         <Route path="/insights/paper-packaging-2026" element={<PageTransition><PaperPackaging2026 /></PageTransition>} />
         <Route path="/contatti" element={<PageTransition><Contact /></PageTransition>} />
         <Route path="/privacy" element={<PageTransition><Privacy /></PageTransition>} />
+        <Route path="/admin/chat-history" element={<PageTransition><ChatHistory /></PageTransition>} />
       </Routes>
     </AnimatePresence>
   );

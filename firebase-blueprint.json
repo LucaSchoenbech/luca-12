@@ -1,0 +1,18 @@
+{
+  "collections": [
+    {
+      "name": "chatbot_conversations",
+      "description": "Stores user conversations with the virtual assistant.",
+      "documents": {
+        "example": {
+          "fields": [
+            { "name": "timestamp", "type": "timestamp", "description": "When the message was sent" },
+            { "name": "role", "type": "string", "description": "User or Model" },
+            { "name": "text", "type": "string", "description": "The message text content" },
+            { "name": "sessionId", "type": "string", "description": "Unique session ID for the conversation" }
+          ]
+        }
+      }
+    }
+  ]
+}

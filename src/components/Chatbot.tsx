@@ -9,6 +9,7 @@ export default function Chatbot() {
   }]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [sessionId] = useState(() => Math.random().toString(36).substring(2, 15));
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -28,13 +29,14 @@ export default function Chatbot() {
     setIsLoading(true);
 
     try {
-      const response = await fetch('/.netlify/functions/chat', {
+      const response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           message: userMessage,
+          sessionId: sessionId,
           history: messages.slice(1).map(m => ({
             role: m.role,
             parts: [{ text: m.text }]

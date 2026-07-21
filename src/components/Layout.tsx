@@ -138,11 +138,12 @@ export default function Layout({ children }: LayoutProps) {
 
           <div className="space-y-8">
             <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-accent">{t('footer.info')}</h4>
-            <div className="text-sm text-gray-500 space-y-2">
+            <div className="text-sm text-gray-500 space-y-2 flex flex-col items-start">
               <p>{t('footer.city')}</p>
               <p>{t('footer.vat')}</p>
               <Link to="/privacy" className="inline-block hover:text-paper transition-colors">{t('footer.privacy')}</Link>
-              <p className="pt-8">{t('footer.rights')}</p>
+              <Link to="/admin/chat-history" className="inline-block hover:text-paper transition-colors pt-8">Admin</Link>
+              <p className="pt-2">{t('footer.rights')}</p>
             </div>
           </div>
         </div>
