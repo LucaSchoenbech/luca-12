@@ -15,7 +15,26 @@ const resources = {
         "info": "Info",
         "city": "Milano",
         "vat": "P.IVA 10706990966",
-        "rights": "© 2026 — Tutti i diritti riservati"
+        "rights": "© 2026 — Tutti i diritti riservati",
+        "privacy": "Informativa privacy"
+      },
+      "privacy": {
+        "title": "Informativa sul trattamento dei dati personali",
+        "last_updated": "Ultimo aggiornamento: 21 luglio 2026",
+        "controller_title": "Titolare del trattamento",
+        "controller_desc": "Luca Roberto Schoenbech, titolare dell'omonima attività professionale (Schoenbech), P.IVA 10706990966 — luca@schoenbech.com",
+        "data_title": "Quali dati trattiamo",
+        "data_desc": "Dati di contatto professionali: nome, ruolo, azienda, indirizzo email e recapito telefonico aziendale.",
+        "source_title": "Da dove provengono i dati",
+        "source_desc": "Da banche dati B2B di fornitori specializzati e da fonti pubbliche, quali profili professionali online e siti aziendali.",
+        "purpose_title": "Perché li trattiamo e con quale base giuridica",
+        "purpose_desc": "I dati sono trattati per attività di ricerca e selezione di personale e per proporre servizi di talent advisory a interlocutori professionali pertinenti. La base giuridica è il legittimo interesse del titolare a svolgere comunicazioni di natura professionale (art. 6, par. 1, lett. f, del Regolamento UE 2016/679).",
+        "communication_title": "A chi comunichiamo i dati",
+        "communication_desc": "Nell'ambito delle attività di ricerca e selezione, i dati dei candidati possono essere comunicati alle aziende clienti interessate al profilo. I dati non sono diffusi né ceduti per finalità diverse da quelle indicate.",
+        "retention_title": "Per quanto tempo li conserviamo",
+        "retention_desc": "I dati sono conservati per il tempo necessario alle finalità indicate. In caso di richiesta di rimozione, il contatto viene inserito in un elenco di esclusione al solo scopo di non essere ricontattato.",
+        "rights_title": "I suoi diritti",
+        "rights_desc": "Lei può in qualsiasi momento accedere ai suoi dati, chiederne la rettifica o la cancellazione e opporsi al trattamento, scrivendo a luca@schoenbech.com. Ha inoltre diritto di proporre reclamo al Garante per la protezione dei dati personali (www.garanteprivacy.it)."
       },
       "home": {
         "hero_subtitle": "Talent Sourcing Advisory",
@@ -321,7 +340,26 @@ const resources = {
         "info": "Info",
         "city": "Milan, Italy",
         "vat": "VAT 10706990966",
-        "rights": "© 2026 — All rights reserved"
+        "rights": "© 2026 — All rights reserved",
+        "privacy": "Privacy Policy"
+      },
+      "privacy": {
+        "title": "Personal Data Processing Policy",
+        "last_updated": "Last updated: July 21, 2026",
+        "controller_title": "Data Controller",
+        "controller_desc": "Luca Roberto Schoenbech, owner of the professional practice of the same name (Schoenbech), VAT 10706990966 — luca@schoenbech.com",
+        "data_title": "What data we process",
+        "data_desc": "Professional contact data: name, role, company, email address, and corporate phone number.",
+        "source_title": "Where the data comes from",
+        "source_desc": "From B2B databases of specialized providers and public sources, such as online professional profiles and company websites.",
+        "purpose_title": "Why we process it and legal basis",
+        "purpose_desc": "The data is processed for personnel search and selection activities and to offer talent advisory services to relevant professional contacts. The legal basis is the legitimate interest of the data controller in conducting professional communications (Art. 6, paragraph 1, letter f, of EU Regulation 2016/679).",
+        "communication_title": "To whom we communicate the data",
+        "communication_desc": "As part of search and selection activities, candidate data may be communicated to client companies interested in the profile. The data is not disseminated or transferred for purposes other than those indicated.",
+        "retention_title": "How long we keep it",
+        "retention_desc": "The data is stored for the time necessary for the stated purposes. In the event of a removal request, the contact is placed on an exclusion list solely to ensure they are not contacted again.",
+        "rights_title": "Your rights",
+        "rights_desc": "You may access your data, request its rectification or erasure, and object to its processing at any time by writing to luca@schoenbech.com. You also have the right to lodge a complaint with the Data Protection Authority (www.garanteprivacy.it)."
       },
       "home": {
         "hero_subtitle": "Talent Sourcing Advisory",

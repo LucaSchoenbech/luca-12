@@ -17,6 +17,7 @@ import HumanFactorMA from './pages/articles/HumanFactorMA';
 import AnalisiSemantica from './pages/articles/AnalisiSemantica';
 import AiLiteracy from './pages/articles/AiLiteracy';
 import Contact from './pages/Contact';
+import Privacy from './pages/Privacy';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -59,6 +60,7 @@ function AnimatedRoutes() {
         <Route path="/insights/life-sciences-2026" element={<PageTransition><LifeSciences2026 /></PageTransition>} />
         <Route path="/insights/paper-packaging-2026" element={<PageTransition><PaperPackaging2026 /></PageTransition>} />
         <Route path="/contatti" element={<PageTransition><Contact /></PageTransition>} />
+        <Route path="/privacy" element={<PageTransition><Privacy /></PageTransition>} />
       </Routes>
     </AnimatePresence>
   );

@@ -141,6 +141,7 @@ export default function Layout({ children }: LayoutProps) {
             <div className="text-sm text-gray-500 space-y-2">
               <p>{t('footer.city')}</p>
               <p>{t('footer.vat')}</p>
+              <Link to="/privacy" className="inline-block hover:text-paper transition-colors">{t('footer.privacy')}</Link>
               <p className="pt-8">{t('footer.rights')}</p>
             </div>
           </div>
