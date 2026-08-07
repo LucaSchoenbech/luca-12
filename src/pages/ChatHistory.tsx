@@ -153,7 +153,8 @@ export default function ChatHistory() {
           )}
 
           <div className="space-y-8">
-            {sortedSessions.map(([sessionId, sessionMessages]) => {
+            {sortedSessions.map(([sessionId, sessionMessagesArray]) => {
+              const sessionMessages = sessionMessagesArray as ChatMessage[];
               // Order messages chronologically for display
               const chronologicalMessages = [...sessionMessages].sort((a, b) => 
                 new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime()

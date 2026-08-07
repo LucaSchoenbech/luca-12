@@ -50,7 +50,7 @@ export default function Chatbot() {
         data = JSON.parse(textResponse);
       } catch (parseError) {
         console.error("Non-JSON response received:", textResponse.substring(0, 200));
-        throw new Error(`Il server ha risposto con un formato non valido. (Status: ${response.status}). Assicurati che le Netlify Functions siano state deployate correttamente.`);
+        throw new Error(`Il server ha risposto con un formato non valido. (Status: ${response.status}). Riprova o ricarica la pagina.`);
       }
 
       if (!response.ok) {
