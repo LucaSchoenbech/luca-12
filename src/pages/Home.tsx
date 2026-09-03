@@ -13,7 +13,8 @@ const HERO_IMAGES = [
 ];
 
 export default function Home() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isEn = i18n.language === 'en';
   const [currentImageIdx, setCurrentImageIdx] = useState(0);
 
   useEffect(() => {
@@ -99,15 +100,21 @@ export default function Home() {
             >
               <div>
                 <span className="block text-accent font-display text-4xl mb-2">~20</span>
-                <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400">Anni di esperienza</span>
+                <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400">
+                  {isEn ? 'Years of experience' : 'Anni di esperienza'}
+                </span>
               </div>
               <div>
                 <span className="block text-accent font-display text-4xl mb-2">+500</span>
-                <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400">Posizioni gestite</span>
+                <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400">
+                  {isEn ? 'Positions managed' : 'Posizioni gestite'}
+                </span>
               </div>
               <div>
                 <span className="block text-accent font-display text-4xl mb-2">8+</span>
-                <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400">Settori di mercato studiati</span>
+                <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400">
+                  {isEn ? 'Industry sectors analyzed' : 'Settori di mercato studiati'}
+                </span>
               </div>
             </motion.div>
           </div>
