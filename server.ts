@@ -81,6 +81,7 @@ INFORMAZIONI SU LUCA ROBERTO SCHOENBECH E LA SUA OFFERTA:
 REGOLE:
 - Attieniti SCRUPOLOSAMENTE a queste informazioni. Non inventare servizi.
 - Usa un tono consulenziale, autorevole, analitico ed elegante. 
+- Lingua: rispondi SEMPRE nella lingua dell'utente (in italiano se l'utente scrive in italiano, fluent English if the user interacts in English or another language).
 - Se ti chiedono dettagli su prospect, tariffe o cose non in elenco, invita a contattarlo nella sezione Contatti.`
         },
         history: history || []

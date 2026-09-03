@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Menu, X, Linkedin, Mail, Globe } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Logo } from './Logo';
 import Chatbot from './Chatbot';
@@ -15,8 +15,15 @@ export default function Layout({ children }: LayoutProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
 
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = i18n.language;
+    }
+  }, [i18n.language]);
+
   const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === 'it' ? 'en' : 'it');
+    const nextLang = i18n.language === 'it' ? 'en' : 'it';
+    i18n.changeLanguage(nextLang);
   };
 
   const navItems = [

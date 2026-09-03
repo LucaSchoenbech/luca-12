@@ -654,15 +654,71 @@ const resources = {
   }
 };
 
+export const detectInitialLanguage = (): 'it' | 'en' => {
+  if (typeof window === 'undefined') return 'it';
+
+  try {
+    // 1. Check if user already manually selected a preference
+    const saved = localStorage.getItem('schoenbech_lang');
+    if (saved === 'it' || saved === 'en') {
+      return saved;
+    }
+
+    // 2. Check browser languages (configured languages in user's OS/browser)
+    const browserLangs: readonly string[] = (navigator.languages && navigator.languages.length > 0)
+      ? navigator.languages
+      : [navigator.language || ''];
+
+    const prefersItalian = browserLangs.some((lang) => 
+      typeof lang === 'string' && lang.toLowerCase().startsWith('it')
+    );
+
+    // 3. Check timezone to identify if accessing from outside Italy
+    let isItalianTimezone = false;
+    try {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      if (tz === 'Europe/Rome' || tz === 'Europe/San_Marino' || tz === 'Europe/Vatican') {
+        isItalianTimezone = true;
+      }
+    } catch {
+      // ignore timezone resolution error
+    }
+
+    // If browser does not have Italian as preference or timezone is outside Italy without Italian locale
+    if (!prefersItalian) {
+      return 'en';
+    }
+
+    if (!isItalianTimezone && !prefersItalian) {
+      return 'en';
+    }
+
+    return 'it';
+  } catch {
+    return 'it';
+  }
+};
+
+const initialLang = detectInitialLanguage();
+
 i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: "it",
-    fallbackLng: "it",
+    lng: initialLang,
+    fallbackLng: "en",
     interpolation: {
       escapeValue: false
     }
   });
 
+i18n.on('languageChanged', (lng) => {
+  try {
+    localStorage.setItem('schoenbech_lang', lng);
+  } catch {
+    // ignore
+  }
+});
+
 export default i18n;
+

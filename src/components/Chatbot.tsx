@@ -1,16 +1,33 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, Send, Bot, User, Loader2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function Chatbot() {
+  const { i18n } = useTranslation();
+  const isEn = i18n.language === 'en';
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<{role: string, text: string}[]>([{
+  const [messages, setMessages] = useState<{role: string, text: string}[]>(() => [{
     role: "model",
-    text: "Ciao! Sono l'assistente virtuale di Luca Roberto Schoenbech. Come posso aiutarti oggi?"
+    text: i18n.language === 'en'
+      ? "Hello! I am Luca Roberto Schoenbech's virtual assistant. How can I assist you today?"
+      : "Ciao! Sono l'assistente virtuale di Luca Roberto Schoenbech. Come posso aiutarti oggi?"
   }]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [sessionId] = useState(() => Math.random().toString(36).substring(2, 15));
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // Update initial greeting if user switches language before sending messages
+  useEffect(() => {
+    if (messages.length === 1 && messages[0].role === 'model') {
+      setMessages([{
+        role: "model",
+        text: i18n.language === 'en'
+          ? "Hello! I am Luca Roberto Schoenbech's virtual assistant. How can I assist you today?"
+          : "Ciao! Sono l'assistente virtuale di Luca Roberto Schoenbech. Come posso aiutarti oggi?"
+      }]);
+    }
+  }, [i18n.language]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -50,17 +67,17 @@ export default function Chatbot() {
         data = JSON.parse(textResponse);
       } catch (parseError) {
         console.error("Non-JSON response received:", textResponse.substring(0, 200));
-        throw new Error(`Il server ha risposto con un formato non valido. (Status: ${response.status}). Riprova o ricarica la pagina.`);
+        throw new Error(isEn ? `Server returned invalid format. (Status: ${response.status}).` : `Il server ha risposto con un formato non valido. (Status: ${response.status}). Riprova o ricarica la pagina.`);
       }
 
       if (!response.ok) {
-        throw new Error(data.error || "Errore nella comunicazione");
+        throw new Error(data.error || (isEn ? "Communication error" : "Errore nella comunicazione"));
       }
 
       setMessages(prev => [...prev, { role: "model", text: data.text }]);
     } catch (error: any) {
       console.error(error);
-      setMessages(prev => [...prev, { role: "model", text: "Scusa, si è verificato un errore: " + error.message }]);
+      setMessages(prev => [...prev, { role: "model", text: (isEn ? "Sorry, an error occurred: " : "Scusa, si è verificato un errore: ") + error.message }]);
     } finally {
       setIsLoading(false);
     }
@@ -79,7 +96,7 @@ export default function Chatbot() {
         <div className="bg-ink text-white p-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <Bot size={20} />
-            <h3 className="font-medium">Assistente Virtuale</h3>
+            <h3 className="font-medium">{isEn ? 'Virtual Assistant' : 'Assistente Virtuale'}</h3>
           </div>
           <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-white transition-colors">
             <X size={20} />
@@ -119,7 +136,7 @@ export default function Chatbot() {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Scrivi un messaggio..."
+              placeholder={isEn ? "Type a message..." : "Scrivi un messaggio..."}
               className="flex-1 px-4 py-2 outline-none bg-paper rounded-full border border-gray-200 focus:border-accent focus:ring-1 focus:ring-accent transition-all text-sm"
               disabled={isLoading}
             />
@@ -136,3 +153,4 @@ export default function Chatbot() {
     </>
   );
 }
+
