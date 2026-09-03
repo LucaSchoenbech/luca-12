@@ -3,6 +3,7 @@ import { ArrowRight, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Logo } from '../components/Logo';
+import { OfficeVideo } from '../components/OfficeVideo';
 import { useState, useEffect } from 'react';
 
 const HERO_IMAGES = [
@@ -127,13 +128,10 @@ export default function Home() {
             </div>
           </div>
           <div className="lg:col-span-5 flex flex-col gap-10">
-            <div className="aspect-[4/3] md:aspect-square relative overflow-hidden group">
-              <motion.img 
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800&h=800"
-                className="absolute inset-0 w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-1000"
-                alt="Executive workspace"
-              />
-            </div>
+            <OfficeVideo 
+              src="/office.mp4" 
+              className="aspect-[4/5] sm:aspect-[3/4] w-full rounded-sm shadow-xl"
+            />
             <div className="border-l-2 border-accent pl-6">
               <p 
                 className="text-xl md:text-2xl font-display font-medium italic leading-relaxed text-ink/90"
