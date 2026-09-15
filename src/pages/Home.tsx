@@ -136,7 +136,9 @@ export default function Home() {
           </div>
           <div className="lg:col-span-5 flex flex-col gap-10">
             <OfficeVideo 
-              src="/office.mp4" 
+              src="/Camera_office_editorial_4x5_muted.mp4" 
+              label={i18n.language === 'en' ? 'Corporate Ecosystem' : 'Ecosistema Organizzativo'}
+              quote={t('home.video_quote')}
               className="aspect-[4/5] sm:aspect-[3/4] w-full rounded-sm shadow-xl"
             />
             <div className="border-l-2 border-accent pl-6">

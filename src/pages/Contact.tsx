@@ -1,10 +1,11 @@
 import { motion } from 'motion/react';
-import { Mail, Linkedin, MapPin, ArrowRight } from 'lucide-react';
+import { Mail, Linkedin, ArrowRight } from 'lucide-react';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { OfficeVideo } from '../components/OfficeVideo';
 
 export default function Contact() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -80,6 +81,15 @@ export default function Contact() {
                   <Linkedin size={20} className="text-accent" />
                   <a href="https://www.linkedin.com/in/luca-roberto-schoenbech-261a8214/" target="_blank" className="hover:text-ink font-medium tracking-wide">/in/lucaroberto-schoenbech</a>
                 </div>
+              </div>
+
+              <div className="pt-8">
+                <OfficeVideo 
+                  src="/office.mp4" 
+                  showLabel={false}
+                  overlayGradient={false}
+                  className="aspect-[4/3] sm:aspect-[16/10] w-full rounded-sm shadow-xl border border-accent-soft"
+                />
               </div>
             </div>
           </div>
